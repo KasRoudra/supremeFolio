@@ -1,0 +1,34 @@
+.dev-icons {
+  padding-left: 0;
+  list-style: none;
+  font-size: 3rem;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.heading-sub-text {
+  font-size: 30px;
+  margin-top: 20px;
+  font-family: "Google Sans Regular";
+  text-align: center;
+}
+
+.competitive-sites-inline {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  font-family: "Google Sans Regular";
+}
+
+.competitive-sites-inline > i {
+  color: #868e96;
+}
+
+.competitive-sites-inline > i:hover {
+  color: #645beb;
+}
+@media(max-width: 768px){
+	.heading-sub-text{
+		font-size: 23px;
+	}	
+}	

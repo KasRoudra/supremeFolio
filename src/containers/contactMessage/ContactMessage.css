@@ -1,0 +1,28 @@
+.cont-image{
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10% ;
+    margin-bottom: 30px;
+}
+.contactMessage-main{
+	margin-bottom: 60px;
+}	
+	
+@media(min-width:768px){
+  .contactMessage-main{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+  }
+  .cont-image{
+    margin-top: 15%;
+  }
+}
+
+@media(max-width:768px){
+  #contact{
+        text-align: center;
+        align-items: center;
+    }
+}
