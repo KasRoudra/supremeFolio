@@ -49,7 +49,7 @@ class ProjectsSection extends Component {
         </div>
         <div className="repo-cards-div-main">
           {ProjectsData.data.map((repo) => {
-            return <GithubRepoCard repo={repo} theme={theme} />;
+            return <GithubRepoCard repo={repo} theme={theme} key={repo.id} />;
           })}
         </div>
         </div>

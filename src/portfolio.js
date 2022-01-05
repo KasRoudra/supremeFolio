@@ -183,9 +183,9 @@ const skills = {
       title: "Full Stack Development",
       imageName: "FullStackImg",
       skills: [
-        "⚡ Building simple website using HTML, CSS, JavaScript",
+        "⚡ Building simple website using HTML, CSS, JavaScript.",
         "⚡ Loves to create web application using VueJS, ReactJS!",
-        "⚡ Writing backend NodeJS application.",
+        "⚡ Creating simple APIs by NodeJS and ExpressJS with MongoDB as database.",
       ],
       softwareSkills: [
         {
@@ -229,6 +229,20 @@ const skills = {
           fontAwesomeClassname: "simple-icons:node-dot-js",
           style: {
             color: "#339933",
+          },
+        },
+        {
+          skillName: "ExpressJS",
+          fontAwesomeClassname: "simple-icons:express",
+          style: {
+            color: "#F24E1E",
+          },
+        },
+        {
+          skillName: "Mongoose",
+          fontAwesomeClassname: "logos-mongodb",
+          style: {
+            color: "#E34F26",
           },
         },
       ],
@@ -902,7 +916,7 @@ const contactPageData = {
     title: "Blogs",
     subtitle:
       "I have written some stories and poems in my native language.",
-    link: "https://kasroudra.github.com/kasweb",
+    link: "https://kasroudra.github.io/kasweb",
     avatar_image_path: "blogs_image.svg",
   },
   addressSection: {

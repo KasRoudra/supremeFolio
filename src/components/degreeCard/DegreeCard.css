@@ -19,7 +19,7 @@
   margin-bottom: 5px;
 }
 
-.card-img {
+.degree-card-img {
   width: 200px;
   height: auto;
   border-radius: 50%;
@@ -85,7 +85,7 @@
 
 .visit-btn {
   /* background-color: #6c63ff99; */
-  display: inline-block;
+  /*display: inline-block;*/
   margin: 0px 10px 10px 0px;
   padding: 10px;
   border-radius: 7px;
@@ -93,9 +93,6 @@
   float: right;
 }
 
-.visit-btn:hover {
-  /* background-color:#6c63ffcc; */
-}
 
 .btn {
   margin: 0px;

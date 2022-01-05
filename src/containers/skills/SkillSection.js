@@ -31,7 +31,7 @@ class SkillSection extends Component {
       <div>
         {skills.data.map((skill) => {
           return (
-            <div className="skills-main-div">
+            <div className="skills-main-div" key={skill.title}>
               <Fade left duration={2000}>
                 <div className="skills-image-div">
                   {/* <img
@@ -56,6 +56,7 @@ class SkillSection extends Component {
                     {skill.skills.map((skillSentence) => {
                       return (
                         <p
+                          key={skillSentence}
                           className="subTitle skills-text"
                           style={{ color: theme.secondaryText }}
                         >

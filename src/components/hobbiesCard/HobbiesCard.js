@@ -12,7 +12,7 @@ class HobbiesCard extends Component {
        <div className="hobbies-card-body-div">
           {hobbies.hobbies.map((hobbiesdata) => {
             return (
-              <div className="hobbies-data">
+              <div className="hobbies-data" key={hobbiesdata.title}>
               <div className="hobbies-heading">
                 <Fade left duration={2000}>
                   <div
