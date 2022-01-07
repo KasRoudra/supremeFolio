@@ -2,8 +2,8 @@
   "private": true,
   "name": "supremeFolio",
   "author": "KasRoudra",
-  "issues": "https://github.com/KasRoudra/supremeFolio/issues",
-  "homepage": "https://kasroudra.github.io",
+  "issues": "https://github.com/KasRoudra/supremeFolio/issues/",
+  "homepage": "https://kasroudra.github.io/",
   "version": "1.0.0",
   "type": "module",
   "scripts": {

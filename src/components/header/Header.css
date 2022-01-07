@@ -37,10 +37,12 @@
   text-decoration: none;
 }
 
+/*
 .header li a:hover,
 .header .menu-btn:hover {
-  /* background-color: #A6E1FA; */
+   background-color: #A6E1FA; 
 }
+*/
 
 .header .logo {
   display: block;
@@ -73,7 +75,7 @@
 
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
+  /*display: inline-block;*/
   float: right;
   padding: 28px 20px;
   position: relative;
@@ -81,31 +83,15 @@
 }
 
 .header .menu-icon .navicon {
-  background: #333;
   display: block;
   height: 2px;
   position: relative;
   transition: background 0.2s ease-out;
   width: 18px;
 }
-.header .menu-icon .navicon-dark {
-  background: #ffffff;
-}
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon-dark:before,
-.header .menu-icon .navicon-dark:after {
-  background: #ffffff;
   content: "";
   display: block;
   height: 100%;

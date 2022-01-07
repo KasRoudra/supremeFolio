@@ -25,8 +25,13 @@
  
 </div>
 
+### Light Mode
 
-![supremeFolio](public/icons/desc.png)
+![supremeFolio](public/icons/light-mode.png)
+
+### Dark Mode 
+
+![supremeFolio](public/icons/dark-mode.png)
 
 ## [~] Description :
 
@@ -97,7 +102,7 @@ Now preview your site in [http://localhost:3000](http://localhost:3000)
 ✔️ PodCasts\
 ✔️ Twitter Tweets\
 ✔️ Education\
-✔️ Contact me\
+✔️ Contact me
 
 To view a live example, **[click here](https://KasRoudra.github.io/)**
 
@@ -123,7 +128,7 @@ In this project, there are basically 4 things that you need to change to customi
 
 #### package.json
 
-Open this file, which is in the main cloned directory. Choose any "name". If you are publishing website in github you need to change the value of `homepage` from `.` to `https://<your-github-username>.github.io`. Do not forget the `https://`, otherwise fonts will not load. If you are using any other hosting service, use that url in `homepage`.
+Open this file, which is in the main cloned directory. Choose any "name". If you are publishing website in github you need to change the value of `homepage` from `https://kasroudra.github.io/` to `https://<your-github-username>.github.io/`. Do not forget the `https://` or the last `/`, otherwise fonts will not load. If you are using any other hosting service, use that url in `homepage`.
 
 ### Personal Information
 
@@ -274,7 +279,7 @@ For more information, read [hosting on heroku](https://create-react-app.dev/docs
 
 #### Extended
 
-- If you want to assign a custom domain of your portfolio, buy a domain and follow this [instruction] for github pages.(https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
+- If you want to assign a custom domain of your portfolio, buy a domain and follow this [instruction](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) for github pages.
 - If you are not deploying website in github you can set `Router` in `src/portfolio.js` to `BrowserRouter` to avoid `#` in page url.
 
 ### Technologies used 🛠️

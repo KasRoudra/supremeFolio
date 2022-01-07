@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
-import "./Header.css";
+import React from "react";
 import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
 import { greeting, pageEnabled } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
 import ToggleSwitch from "../toggleSwitch/ToggleSwitch";
-import StyleContext from "../../contexts/StyleContext"
+import "./Header.css";
 
 const onMouseEnter = (event, color) => {
   const el = event.target;
@@ -18,9 +17,18 @@ const onMouseOut = (event) => {
   el.style.backgroundColor = "transparent";
 };
 
+
 const Header = (props) => {
-    const {isDark}= useContext(StyleContext)
     const theme = props.theme;
+    const styles = `
+		.navic{
+			background: ${theme.text}
+		 }
+		.navic:before,
+		.navic:after {
+			background: ${theme.text}
+		}
+	`
     const viewExperience = pageEnabled.experience;
     const viewEducation = pageEnabled.education;
     const viewProjects = pageEnabled.projects;
@@ -32,6 +40,7 @@ const Header = (props) => {
       <Fade top duration={1000} distance="20px">
         <SeoHeader />
         <div>
+          <style>{styles}</style>
           <header className="header">
             <NavLink to={link} tag={Link} className="logo">
               <span style={{ color: theme.text }}> &lt;</span>
@@ -42,7 +51,7 @@ const Header = (props) => {
             </NavLink>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" htmlFor="menu-btn">
-              <span className={isDark ?"navicon navicon-dark" : "navicon"} id="navicon" ></span>
+              <span className="navicon navic"></span>
             </label>
             <ul className="menu">
               <li>
