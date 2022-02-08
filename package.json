@@ -12,7 +12,9 @@
     "deploy": "gh-pages -b gh-pages -d build",
     "eject": "react-scripts eject",
     "start": "node fetcher.mjs && react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "heroku-prebuild": "npm i -f",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
