@@ -1,11 +1,9 @@
-import React, { Component } from "react";
-import "./DegreeCard.css";
+import React from "react";
 import { Fade, Flip } from "react-reveal";
+import "./DegreeCard.css";
 
-class DegreeCard extends Component {
-  render() {
-    const degree = this.props.degree;
-    const theme = this.props.theme;
+const DegreeCard = (props) => {
+    const { degree, theme } = props;
     return (
       <div className="degree-card">
         <Flip left duration={2000}>
@@ -58,7 +56,7 @@ class DegreeCard extends Component {
                   className="visit-btn"
                   style={{ backgroundColor: theme.headerColor }}
                 >
-                  <p className="btn" style={{ color: theme.text }}>
+                  <p className="btn-text" style={{ color: theme.text }}>
                     Visit Website
                   </p>
                 </div>
@@ -68,7 +66,6 @@ class DegreeCard extends Component {
         </Fade>
       </div>
     );
-  }
 }
 
 export default DegreeCard;

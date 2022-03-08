@@ -1,13 +1,12 @@
-import React,{Component} from "react";
+import React from "react";
 import {Fade} from "react-reveal";
+import { greeting, contactPageData } from "../../portfolio.js";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import { greeting, contactPageData } from "../../portfolio.js";
 import "./ContactSection.css";
 
-class ContactSection extends Component{
-  render() {
-     const theme = this.props.theme;
+const ContactSection = (props) => {
+     const theme = props.theme;
      const contactSection = contactPageData.contactSection;
      return(
         <div className="basic-contact">
@@ -46,6 +45,5 @@ class ContactSection extends Component{
           </Fade>
         </div>
     );
-  }	
 }
 export default ContactSection;

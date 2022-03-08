@@ -1,25 +1,25 @@
-import React, {useState} from "react";
-import {Alert} from "react-bootstrap";
+import React, { useState } from "react";
+import { Alert } from "react-bootstrap";
+import { Fade } from "react-reveal";
 import "./BlogCard.css";
 
-export default function BlogCard({blog, theme}) {
-	
-  const [show, setShow] = useState(false);
+const BlogCard = ({blog, theme}) => {
+  const [ show, setShow ] = useState(false);
   function openUrlInNewTab(url, name) {
     if (!url) {
-    	alert("404 | URL Not Found!");
-    	setShow(true);
-    	return(
-        <Alert show={show} variant="success">
-             <Alert.Heading>404 | URL Not Found!</Alert.Heading>
-        </Alert>
-      ); 
+      setShow(true);
+    	setTimeout(() => {
+          setShow(false);
+      }, 4000);
     }
-    var win = window.open(url, "_blank");
-    win.focus();
+    else {
+        var win = window.open(url, "_blank");
+        win.focus();
+    }
   }
   return (
-    <div onClick={() => openUrlInNewTab(blog.url, blog.title)}>
+    <Fade bottom duration={2000}>
+     <div onClick={() => openUrlInNewTab(blog.url, blog.title)}>
       <div className="blog-container" style={{backgroundColor: theme.jacketColor}} align="center">
       <a
           className="blog-card blog-card-shadow"
@@ -36,6 +36,12 @@ export default function BlogCard({blog, theme}) {
           </div>
           </a>
       </div>
-    </div>
+     </div>
+     <Alert show={show} variant="error">
+        <Alert.Heading>404| Not Found!</Alert.Heading>
+     </Alert>
+    </Fade>
   );
 }
+
+export default BlogCard;

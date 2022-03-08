@@ -1,7 +1,5 @@
 import fetch from 'node-fetch';
 import fs from 'fs';
-import {usernames} from './src/portfolio.js';
-
 
 
 // Change this values if you don't use environment variables 
@@ -9,19 +7,22 @@ import {usernames} from './src/portfolio.js';
 
 var githubConvertedToken = "Your Github Token Here";
 var githubUserName = "Your Github Username Here";
+var mediumUserName = "Your Medium Username Here";
 
 
-
-
-if (githubConvertedToken === "Your Github Token Here"){
-    githubConvertedToken = process.env.GITHUB_TOKEN;
-};
 
 if (githubUserName === "Your Github Username Here"){
     githubUserName = process.env.GITHUB_USERNAME;
 };
 
-// console.log(githubUserName,githubConvertedToken)
+if (githubConvertedToken === "Your Github Token Here"){
+    githubConvertedToken = process.env.GITHUB_TOKEN;
+};
+
+if (mediumUserName === "Your Medium Username Here"){
+  mediumUserName = process.env.MEDIUM_USERNAME;
+};
+
 
 if (githubUserName === undefined || githubConvertedToken === undefined){
     console.log("Skipping GitHub Data!\n");
@@ -386,9 +387,9 @@ fetch(baseUrl, {
   );
 }
   
-const targetUrl = `http://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${usernames.medium}`;
+const targetUrl = `http://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUserName}`;
 
-if (usernames.medium !== "none"){
+if (mediumUserName){
 	console.log("Fetching Medium Blogs.\n");	
 fetch(targetUrl, {
   method: "GET",

@@ -1,12 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
+import "chart.js/auto";
+import { Fade } from "react-reveal";
 import PullRequestChart from "../../components/pullRequestChart/PullRequestChart.js";
 import IssueChart from "../../components/issueChart/IssueChart.js";
-import { Fade } from "react-reveal";
 import "./OpensourceCharts.css";
 
-class OpensourceCharts extends Component {
-  render() {
-    const theme = this.props.theme;
+
+const OpensourceCharts = (props) => {
+    const theme = props.theme;
     return (
       <div>
         <div className="os-charts-header-div">
@@ -22,7 +23,6 @@ class OpensourceCharts extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default OpensourceCharts;

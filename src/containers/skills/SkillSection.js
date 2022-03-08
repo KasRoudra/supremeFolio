@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import "./Skills.css";
-import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import { skills } from "../../portfolio";
 import { Fade } from "react-reveal";
+import { skills } from "../../portfolio";
 import FullStackImg from "./FullStackImg";
 import TerminalImg from "./TerminalImg";
 import DesignImg from "./DesignImg";
 import AppDevelopImg from "./AppDevelopImg";
 import CloudInfraImg from "./CloudInfraImg";
 import DataScienceImg from "./DataScienceImg";
+import SoftwareSkills from "../../components/softwareSkills/SoftwareSkills";
+import "./Skills.css";
 
 function GetSkillSvg(props) {
   if (props.imageName === "TerminalImg")
@@ -49,7 +49,7 @@ class SkillSection extends Component {
                   </h1>
                 </Fade>
                 <Fade right duration={1500}>
-                  <SoftwareSkill logos={skill.softwareSkills} />
+                  <SoftwareSkills logos={skill.softwareSkills} />
                 </Fade>
                 <Fade right duration={2000}>
                   <div>

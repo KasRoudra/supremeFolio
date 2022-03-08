@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import "./OrganizationList.css";
+import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Fade } from "react-reveal";
+import "./OrganizationList.css";
 
-class OrganizationList extends Component {
-  render() {
+const OrganizationList = (props) => {
+  const logos = props.logos;
     return (
       <div className="organizations-main-div">
         <ul className="dev-icons-orgs">
-          {this.props.logos.map((logo) => {
+          {logos.map((logo) => {
             return (
               <OverlayTrigger
                 key={logo["login"]}
@@ -35,7 +35,6 @@ class OrganizationList extends Component {
         </ul>
       </div>
     );
-  }
 }
 
 export default OrganizationList;

@@ -1,11 +1,10 @@
-import React, {Component} from "react";
+import React from "react";
 import {Fade} from "react-reveal";
-import {podcastSection} from "../../portfolio";
+import { podcastSection } from "../../portfolio";
 import "./Podcast.css";
 
-class Podcast extends Component {
-	render() {
-  const theme = this.props.theme;		
+const Podcast = (props) => {
+  const theme = props.theme;		
   if (!podcastSection.display) {
     return null;
   }
@@ -48,6 +47,5 @@ class Podcast extends Component {
         </div>
       </div>
    );
-  }
 }
 export default Podcast;

@@ -4,10 +4,10 @@
 
 /* Some Tips:
 ★ Place your images in "src/assets/images" path
+★ Place your custom loading animations in assets/lottie
 ★ Set value to false to hide a section or an entire page
 ★ Get fontAwesomeClassnames from https://www.fontawesome.com
-★ Set medium username to none and display of blogSection false to hide all kind of blogs
-★ If any page doesn't have enough data to cover fullscreen height, you may need to add className "full-height-lg" (for large screen.like pc) or "full-height-sm"(for mobile phones) in the main div tag of that page
+★ Set blogSection false to hide all kind of blogs
 */
 
 /*
@@ -19,6 +19,9 @@ Credits: masterPortfolio(https://github.com/ashutosh1919/masterPortfolio)
 
 // Website related settings
 // Which pages will be enabled
+
+
+
 const pageEnabled = {
 
   splash: true, // Change this to false if you don't want Splash screen
@@ -41,6 +44,26 @@ const routerValue = "HashRouter"; /* Supported values:
  					1. HashRouter(for github hosted user Pages)
  					2. BrowserRouter (for regular hosting)
  					*/
+ 					
+// Splash Screen
+
+const splashScreen = {
+	useLottie: true, // setting it false will show animation of src/components/loader
+  animationFile: "starLoading", /* Supported Values
+    					             1. splashAnimation
+    					             2. email
+    					             3. build
+    					             4. landingPerson
+    					             5. codingPerson
+    					             6. geometricLoader
+    					             7. starLoading
+    					             8. ripple
+    					             9. nightDay
+    					             10. littleRobot
+    					             11. poolChartLoading
+    					             */
+  duration: 3500, // Set animation duration(milliseconds) as per your animation
+}; 					
  					
  					
 /**************               Home Page                    ****************/
@@ -340,12 +363,12 @@ const techStack = { // Skill Part
       progressPercentage: "90%" // Insert relative proficiency in percentage
     },
     {
-      Stack: "CSS",
+      Stack: "CSS/SASS",
       progressPercentage: "80%"
     },
     {
-      Stack: "JavaScript",
-      progressPercentage: "70%"
+      Stack: "JavaScript/TypeScript",
+      progressPercentage: "80%"
     },
     {
       Stack: "PHP",
@@ -370,6 +393,14 @@ const techStack = { // Skill Part
     {
       Stack: "Java",
       progressPercentage: "60%"
+    },
+    {
+      Stack: "GO",
+      progressPercentage: "60%"
+    },
+    {
+      Stack: "CPP",
+      progressPercentage: "50%"
     }
   ],
 };
@@ -378,7 +409,7 @@ const techStack = { // Skill Part
 const bigProjects = {
   display: false, // Set it true to show big projects
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: "Some startups and companies that i helped to create their tech",
   projects: [
     {
       image: "saayaHealthLogo.png", 
@@ -407,22 +438,22 @@ const bigProjects = {
 };
 
 const blogSection = {
-  display: false, // Set it false to display fetched medium blogs instead of hardcoded ones. Medium blogs may not contain url!	
+  display: "none", // Set it none to hide blogs or set it to hardcdoded for following blogs
   title: "Blogs",
   subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
+  "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
   blogs: [
     {
       url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
       title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
       description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
+      "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
     },
     {
       url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
       title: "Why REACT is The Best?",
       description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
+      "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
 };
@@ -430,8 +461,8 @@ const blogSection = {
 
 const talkSection = {
   display: false, // Set it true to show talks	
-  title: "TALKS",
-  subtitle: "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE",
+  title: "Talks",
+  subtitle: "I love to share my limited knowledge and get a speaker badge",
 
   talks: [
     {
@@ -448,7 +479,7 @@ const talkSection = {
 const podcastSection = {
   display: false, // Set it true to show your podcasts
   title: "Podcast",
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
+  subtitle: "I love to talk about myself and technology",
 
   // Please Provide with Your Podcast embeded Link
   podcast: [
@@ -457,11 +488,9 @@ const podcastSection = {
 };
 
 
-// Your tweets and blogs
-const usernames = {
-    twitter: "none", // set it none to display no tweets
-    medium: "none", // set it none to display no medium blogs
-};
+// Your tweets displayed in a iframe
+const twitterUsername =  "none"; // set it none to display no tweets
+
 
 
 
@@ -962,5 +991,6 @@ export {
   blogSection,
   contactPageData,
   contactMessage,
-  usernames,
+  twitterUsername,
+  splashScreen,
 };

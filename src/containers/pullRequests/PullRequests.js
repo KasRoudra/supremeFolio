@@ -1,23 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
+import { openSource } from "../../portfolio";
 import PullRequestCard from "../../components/pullRequestCard/PullRequestCard";
 import PullRequestsData from "../../shared/opensource/pull_requests.json";
-import {openSource} from "../../portfolio";
 import "./PullRequests.css";
 
-class PullRequests extends Component {
-  render() {
-  	
-    const theme = this.props.theme;
-    
-    if (!PullRequestsData.data.length === 0){
+const PullRequests = (props) => {
+    const theme = props.theme;
+    if (!PullRequestsData.data.length === 0 || !openSource.pull_requests){
     	return null;
     }
-    
-    if(!openSource.pull_requests){
-    	return null;
-    }	
-    
     return (
       <div>
         <div className="pull-requests-header-div">
@@ -34,7 +26,6 @@ class PullRequests extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default PullRequests;

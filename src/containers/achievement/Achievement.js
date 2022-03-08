@@ -1,40 +1,39 @@
 import React from "react";
+import AchievementCard from "../../components/achievementCard/AchievementCard";
+import { certifications } from "../../portfolio";
 import "./Achievement.css";
-import AchivementCard from "../../components/achievementCard/AchivementCard";
-import { achievementSection } from "../../portfolio";
-import StyleContext from "../../contexts/StyleContext";
 
-export default function Achievement() {
+const Achievement = (props) => {
   // function openUrlInNewTab(url) {
   //   var win = window.open(url, "_blank");
   //   win.focus();
   // }
-  const viewAchievement = achievementSection.display;
-  const {isDark} = useContext(StyleContext);
-  if (!viewAchievement){
+  const theme = props.theme;
+  if (!certifications.display){
   	return null;
   }	
   return (
     <div className="main" id="achievements">
       <div className="achievement-main-div">
         <div className="achievement-header">
-          <h1 className="heading achievement-heading">
-            {achievementSection.title}
+          <h1 className="heading achievement-heading" style={{ color: theme.text }}>
+            {certifications.title}
           </h1>
-          <p className="subTitle achievement-subtitle">
-            {achievementSection.subtitle}
+          <p className="subTitle achievement-subtitle" style={{ color: theme.secondaryText }}>
+            {certifications.subtitle}
           </p>
         </div>
         <div className="achievement-cards-div">
-          {achievementSection.achivementsCards.map((card) => {
+          {certifications.certifications.map((card) => {
             return (
-              <AchivementCard
+              <AchievementCard
                 cardInfo={{
                   title: card.title,
                   description: card.subtitle,
                   image: card.image,
                   footer: card.footerLink,
                 }}
+                theme={theme}
               />
             );
           })}
@@ -43,3 +42,5 @@ export default function Achievement() {
     </div>
   );
 }
+
+export default Achievement;

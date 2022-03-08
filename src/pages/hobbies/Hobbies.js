@@ -1,24 +1,23 @@
-import React, {Component} from "react";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
-import TopButton from "../../components/topButton/TopButton";
-import HobbiesSection from "../../containers/hobbiesSection/HobbiesSection";
-import HobbiesCard from "../../components/hobbiesCard/HobbiesCard.js";
+import React from "react";
+import { pageEnabled } from "../../portfolio";
+import { Header, HobbiesCard, TopButton, Footer } from "../../components";
+import { HobbiesSection } from "../../containers";
 
 
-class Hobbies extends Component {
-	render() {
-	const theme = this.props.theme;
+const Hobbies = (props) => {
+	const theme = props.theme;
+	if(!pageEnabled.hobbies){
+		return null;
+	}	
     return (
-      <div className="Pages">
+      <div className="main-page">
         <Header theme={theme} />
         <HobbiesSection theme={theme} />
         <HobbiesCard theme={theme} />
-        <Footer theme={theme} onToggle={this.props.onToggle} />
+        <Footer theme={theme} onToggle={props.onToggle} />
         <TopButton theme={theme} />
      </div>
     );
-  }  
 }
 
 export default Hobbies;

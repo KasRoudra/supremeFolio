@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class FullStackImg extends Component {
-  render() {
-    const theme = this.props.theme;
+const FullStackImg = (props) => {
+    const theme = props.theme;
     return (
       <svg
         id="f0a8f4ba-cc2b-4400-9e08-d246a0bad060"
@@ -254,5 +253,6 @@ export default class FullStackImg extends Component {
         />
       </svg>
     );
-  }
 }
+
+export default FullStackImg;

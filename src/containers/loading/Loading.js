@@ -1,7 +1,7 @@
 import React from "react";
 import "./loading.css";
 
-export default function Loading() {
+const Loading = () => {
   return (
     <div className="centerContent">
       <div className="sk-circle">
@@ -21,3 +21,5 @@ export default function Loading() {
     </div>
   );
 }
+
+export default Loading;

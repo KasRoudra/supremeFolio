@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Fade } from "react-reveal";
 import PullRequestsData from "../../shared/opensource/pull_requests.json";
 import {openSource} from "../../portfolio";
 import "./PullRequestChart.css";
 
-class PullRequestChart extends Component {
-  render() {
-    const theme = this.props.theme	
+
+const PullRequestChart = (props) => {
+    const theme = props.theme	
     const data = {
       labels: ["Open", "Merged", "Closed"],
       datasets: [
@@ -50,7 +50,6 @@ class PullRequestChart extends Component {
         />
       </div>
     );
-  }
 }
 
 export default PullRequestChart;

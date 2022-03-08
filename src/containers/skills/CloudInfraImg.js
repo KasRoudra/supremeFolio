@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class CloudInfraImg extends Component {
-  render() {
-    const theme = this.props.theme;
+const CloudInfraImg = (props) => {
+    const theme = props.theme;
     return (
       <svg
         id="1dff4cb4-53bd-4ffc-acc1-5e8a2ceb72de"
@@ -270,5 +269,6 @@ export default class CloudInfraImg extends Component {
         />
       </svg>
     );
-  }
 }
+
+export default CloudInfraImg

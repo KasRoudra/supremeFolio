@@ -1,11 +1,10 @@
-import React, { Component } from "react";
-import "./PullRequestCard.css";
+import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Fade } from "react-reveal";
+import "./PullRequestCard.css";
 
-class PullRequestCard extends Component {
-  render() {
-    const pullRequest = this.props.pullRequest;
+const PullRequestCard = (props) => {
+    const pullRequest = props.pullRequest;
     var iconPR;
     var bgColor;
     if (pullRequest["state"] === "OPEN") {
@@ -143,7 +142,6 @@ class PullRequestCard extends Component {
         </div>
       </Fade>
     );
-  }
 }
 
 export default PullRequestCard;

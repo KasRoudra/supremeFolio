@@ -1,11 +1,10 @@
-import React, {Component} from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import { techStack } from "../../portfolio";
 import "./TechStack.css";
 
-class TechStack extends Component {
-	render() {
-	const theme = this.props.theme;
+const TechStack = (props) => {
+	const theme = props.theme;
 	if (techStack.display) {
     return (
     <div className="techMain">
@@ -35,8 +34,7 @@ class TechStack extends Component {
       </Fade>
      </div> 
     );
-    }
+  }
 	return null;
-  }	
 }	
 export default TechStack;

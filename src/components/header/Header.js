@@ -35,7 +35,26 @@ const Header = (props) => {
     const viewopenSource = pageEnabled.opensource;
     const viewHobbbies = pageEnabled.hobbies;
     const viewSplash = pageEnabled.splash;
-    const link = viewSplash ? "/splash" : "home";
+    const link = viewSplash ? "/splash" : "/home";
+
+    const MyLink = ({name, link}) => {
+        return (
+          <li className="li">
+            <NavLink
+                  to={link}
+                  tag={Link}
+                  style={({ isActive }) => ({
+                    fontWeight: isActive ? "bold" : "normal",
+                    color: theme.text 
+                  })}
+                  onMouseEnter={(event) => onMouseEnter(event, theme.jacketColor)}
+                  onMouseOut={(event) => onMouseOut(event)}
+                >
+                  {name}
+                </NavLink>
+          </li>
+        )
+    }
     return (
       <Fade top duration={1000} distance="20px">
         <SeoHeader />
@@ -54,104 +73,17 @@ const Header = (props) => {
               <span className="navicon navic"></span>
             </label>
             <ul className="menu">
-              <li>
-                <NavLink
-                  to="/home"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.jacketColor)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Home
-                </NavLink>
+              <MyLink name="Home" link="/home" />
+              {viewExperience && <MyLink name="Experience" link="/experience" />}
+              {viewEducation && <MyLink name="Education" link="/education" />}
+              {viewProjects && <MyLink name="Projects" link="/projects" />}
+              {viewopenSource && <MyLink name="Open Source" link="/opensource" />}
+              {viewHobbbies && <MyLink name="Hobbies" link="/hobbies" />}
+              <MyLink name="Contact" link="/contact" />
+              <li className="li">
+                <ToggleSwitch />
               </li>
-              { viewEducation && (
-              <li>
-                <NavLink
-                  to="/education"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.jacketColor)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Education
-                </NavLink>
-              </li>
-               )}
-               { viewHobbbies && (
-               <li>
-                <NavLink
-                  to="/hobbies"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.jacketColor)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Hobbies
-                </NavLink>
-               </li>
-                )}
-              { viewExperience && (
-              <li>
-                <NavLink
-                  to="/experience"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.jacketColor)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Experience
-                </NavLink>
-              </li>
-              )}
-              { viewProjects && (
-              <li>
-                <NavLink
-                  to="/projects"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.jacketColor)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Projects
-                </NavLink>
-              </li>
-               )}
-               { viewopenSource && (
-              <li>
-                <NavLink
-                  to="/opensource"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.jacketColor)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Open Source
-                </NavLink>
-              </li>
-               )}
-              <li>
-                <NavLink
-                  to="/contact"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.jacketColor)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Contact Me
-                </NavLink>
-                </li>
-                <li className="switch">
-                 <ToggleSwitch />
-                 </li>
-            </ul>
+             </ul>
           </header>
         </div>
       </Fade>

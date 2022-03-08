@@ -1,11 +1,10 @@
-import React, {Component} from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import {hobbies} from "../../portfolio";
 import "./HobbiesSection.css";
 
-class HobbiesSection extends Component {
-	render() {
-	const theme = this.props.theme;
+const HobbiesSection = (props) => {
+	const theme = props.theme;
     return (
         <div className="basic-hobbies">
           <Fade bottom duration={2000} distance="40px">
@@ -28,7 +27,6 @@ class HobbiesSection extends Component {
           </Fade>
      </div>
     );
-  }  
 }
 
 export default HobbiesSection;

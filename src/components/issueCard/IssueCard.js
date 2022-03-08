@@ -1,11 +1,10 @@
-import React, { Component } from "react";
-import "./IssueCard.css";
+import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Fade } from "react-reveal";
+import "./IssueCard.css";
 
-class IssueCard extends Component {
-  render() {
-    const issue = this.props.issue;
+const IssueCard = (props) => {
+    const issue = props.issue;
     var iconPR;
     var bgColor;
     if (issue["closed"] === false) {
@@ -134,7 +133,6 @@ class IssueCard extends Component {
         </div>
       </Fade>
     );
-  }
 }
 
 export default IssueCard;

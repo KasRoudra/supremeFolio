@@ -13,7 +13,7 @@ const onMouseOut = (event, color, bgColor) => {
   el.style.backgroundColor = bgColor;
 };
 
-export default function Button({ text, className, href, newTab, theme }) {
+const Button = ({ text, className, href, newTab, theme }) => {
   return (
     <div className={className}>
       <a
@@ -33,3 +33,5 @@ export default function Button({ text, className, href, newTab, theme }) {
     </div>
   );
 }
+
+export default Button;

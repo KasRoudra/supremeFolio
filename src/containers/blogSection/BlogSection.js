@@ -1,13 +1,12 @@
-import React,{Component} from "react";
+import React from "react";
 import {Fade} from "react-reveal";
-import Button from "../../components/button/Button";
-import BlogsImg from "./BlogsImg";
 import { contactPageData } from "../../portfolio.js";
+import BlogsImg from "./BlogsImg";
+import Button from "../../components/button/Button";
 import "./BlogSection.css";
 
-class BlogSection extends Component{
-  render() {
-     const theme = this.props.theme;
+const BlogSection = (props) => {
+     const theme = props.theme;
      const blogSection = contactPageData.blogSection;
      return(
         <div className="basic-contact">
@@ -43,6 +42,5 @@ class BlogSection extends Component{
           </Fade>
         </div>
     );
-  }	
 }
 export default BlogSection;

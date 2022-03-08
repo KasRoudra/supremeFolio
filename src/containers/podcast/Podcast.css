@@ -1,5 +1,6 @@
 .podcast-main{
 	overflow: hidden;
+  padding-top: 50px;
 }	
 .podcast-header-title {
   font-size: 45px;
@@ -46,6 +47,7 @@
 @media (min-width: 768px){
   .podcast-header-title {
     text-align: center;
+    font-size: 30px;
   }
   .podcast-header-subtitle {
     margin-top: 30px;	

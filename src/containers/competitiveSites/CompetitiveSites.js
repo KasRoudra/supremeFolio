@@ -1,11 +1,10 @@
-import React, {Component} from "react";
+import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import {competitiveSites} from "../../portfolio";
 import "./CompetitiveSites.css";
 
-class CompetitiveSites extends Component {
-  render() {
-    const theme = this.props.theme;
+const CompetitiveSites = (props) => {
+    const theme = props.theme;
     if (!competitiveSites.display){
     	return null;
     }	
@@ -47,7 +46,6 @@ class CompetitiveSites extends Component {
         </ul>
       </div>
     );
-  }
 }
 
 export default CompetitiveSites;

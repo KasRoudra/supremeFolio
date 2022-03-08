@@ -5,9 +5,11 @@
   border-radius: 1% ;
   padding: 2rem;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 .repo-card-div:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
+  background-color: rgb(59, 72, 255);
 }
 
 .repo-stats {
@@ -34,9 +36,14 @@
 
 .repo-left-stat span {
   display: flex;
-  -webkit-box-align: center;
+  justify-content: center;
   align-items: center;
+  -webkit-box-align: center;
   margin-right: 0.75rem;
+}
+
+.repo-left-stat span > * {
+  margin: 0.2rem;
 }
 
 .repo-name-div {

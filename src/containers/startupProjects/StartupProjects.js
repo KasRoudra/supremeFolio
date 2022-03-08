@@ -1,5 +1,5 @@
 import React from "react";
-import {Fade} from "react-reveal";
+import { Fade } from "react-reveal";
 import {bigProjects} from "../../portfolio";
 import "./StartupProjects.css";
 

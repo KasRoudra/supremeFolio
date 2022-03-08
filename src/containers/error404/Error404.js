@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import { Link } from "react-router-dom";
 import "./Error404.css";
 
-class Error404 extends Component {
-    render() {
-    const theme = this.props.theme;
+const Error404 = (props) => {
+    const theme = props.theme;
     return (
       <div className="error-main">
         <div className="error-class">
@@ -29,6 +28,5 @@ class Error404 extends Component {
       </div>
       </div>
     );
-  }
 }
 export default Error404;

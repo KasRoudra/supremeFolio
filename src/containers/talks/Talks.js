@@ -1,7 +1,7 @@
 import React from "react";
-import {Fade} from "react-reveal";
+import { Fade } from "react-reveal";
+import { talkSection } from "../../portfolio";
 import TalkCard from "../../components/talkCard/TalkCard";
-import {talkSection} from "../../portfolio";
 import "./Talks.css";
 
 export default function Talks(props) {
@@ -25,9 +25,8 @@ export default function Talks(props) {
           </Fade>
           {talkSection.talks.map((talk, i) => {
             return (
-            <Fade bottom duration={2000} distance="40px">
+            <Fade bottom duration={2000} distance="40px" key={talk.title}>
               <TalkCard
-                key={i}
                 talkDetails={{
                   title: talk.title,
                   subtitle: talk.subtitle,
@@ -35,6 +34,7 @@ export default function Talks(props) {
                   event_url: talk.event_url,
                   image: talk.image,
                 }}
+                theme={theme}
               />
               </Fade>
             );

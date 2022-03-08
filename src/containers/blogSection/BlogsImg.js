@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class BlogsImg extends Component {
-  render() {
-    const theme = this.props.theme;
+const BlogsImg = (props) => {
+    const theme = props.theme;
     return (
       <svg
         id="b4ce20e6-8fe7-43d5-87f7-68602c562594"
@@ -11,6 +10,7 @@ export default class BlogsImg extends Component {
         width="1061"
         height="742.85506"
         viewBox="0 0 1061 742.85506"
+        style={{ marginTop: "20px"}}
       >
         <title>task</title>
         <path
@@ -276,5 +276,6 @@ export default class BlogsImg extends Component {
         />
       </svg>
     );
-  }
 }
+
+export default BlogsImg;

@@ -1,13 +1,12 @@
-import React,{Component} from "react";
+import React from "react";
 import {Fade} from "react-reveal";
 import Button from "../../components/button/Button";
 import AddressImg from "./AddressImg";
 import { contactPageData } from "../../portfolio.js";
 import "./AddressSection.css";
 
-class AddressSection extends Component{
-  render() {
-     const theme = this.props.theme;
+const AddressSection = (props) => {
+     const theme = props.theme;
      const addressSection = contactPageData.addressSection;
      const phoneSection = contactPageData.phoneSection;
      return(
@@ -59,6 +58,5 @@ class AddressSection extends Component{
           </Fade>
         </div>
     );
-  }	
 }
 export default AddressSection;

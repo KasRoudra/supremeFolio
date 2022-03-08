@@ -111,7 +111,7 @@ export const orangeTheme = {
 export const darkTheme = {
   body: "#171c28",
   text: "#ffffff",
-  highlight: "#000000",
+  highlight: "#ffba08",
   dark: "#000000",
   secondaryText: "#D6D5CB",
   imageHighlight: "#fca311",

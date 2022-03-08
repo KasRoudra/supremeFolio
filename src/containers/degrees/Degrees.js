@@ -1,12 +1,11 @@
-import React, { Component } from "react";
-import "./Degrees.css";
-import DegreeCard from "../../components/degreeCard/DegreeCard.js";
-import { degrees } from "../../portfolio";
+import React from "react";
 import { Fade } from "react-reveal";
+import { degrees } from "../../portfolio";
+import DegreeCard from "../../components/degreeCard/DegreeCard.js";
+import "./Degrees.css";
 
-class Degrees extends Component {
-  render() {
-    const theme = this.props.theme;
+const Degrees = (props) => {
+    const theme = props.theme;
     const viewDegree = degrees.display;
     if (!viewDegree){
     	return null;
@@ -27,7 +26,6 @@ class Degrees extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Degrees;

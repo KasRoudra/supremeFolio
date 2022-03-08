@@ -1,18 +1,17 @@
-import React, { Component} from "react";
+import React from "react";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {contactPageData} from "../../portfolio";
 import {Fade} from "react-reveal";
 import UserData from "../../shared/opensource/user.json";
 import "./AboutMe.css";
 
-class AboutMe extends Component {
-  render() {
+const AboutMe = (props) => {
   if (UserData.data.isHireable) {
     UserData.data.hireable = "Yes";
   } else {
     UserData.data.hireable = "No";
   }
-  const theme= this.props.theme;
+  const theme= props.theme;
   if (UserData.data.length === 0) {
   	return null;
   }
@@ -77,6 +76,5 @@ class AboutMe extends Component {
     </Fade>
     </div>
   );
-  }
 }
 export default AboutMe;

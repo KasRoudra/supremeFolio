@@ -1,27 +1,23 @@
-import React, { Component } from "react";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
-import TopButton from "../../components/topButton/TopButton";
-import ExperienceSection from "../../containers/experienceSection/ExperienceSection";
-import ExperienceAccordion from "../../containers/experienceAccordion/ExperienceAccordion.js";
-import { experience, pageEnabled } from "../../portfolio.js";
+import React from "react";
+import { pageEnabled, experience } from "../../portfolio";
+import { Header, TopButton, Footer } from "../../components";
+import { ExperienceSection, ExperienceAccordion }from "../../containers";
 
-class Experience extends Component {
-	render() {
-    const theme= this.props.theme;
+
+const Experience = (props) => {
+    const theme= props.theme;
     if (!pageEnabled.experience){
     	return null;
     }	
     return (
-      <div className="Pages">
+      <div className="main-page">
         <Header theme={theme} />
         <ExperienceSection theme={theme} />
         <ExperienceAccordion sections={experience["sections"]} theme={theme} />
-        <Footer theme={theme} onToggle={this.props.onToggle} />
+        <Footer theme={theme} onToggle={props.onToggle} />
         <TopButton theme={theme} />
       </div>
     );
-  }
 }
 
 export default Experience;

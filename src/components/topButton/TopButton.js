@@ -1,7 +1,8 @@
 import React from "react";
 import "./TopButton.css";
 
-export default function TopButton({ theme }) {
+const TopButton = (props) => {
+  const { theme } = props;
   function GoUpEvent() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -63,3 +64,5 @@ export default function TopButton({ theme }) {
     </div>
   );
 }
+
+export default TopButton;

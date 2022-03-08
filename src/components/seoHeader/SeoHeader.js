@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { seo } from "../../portfolio.js";
 
-function SeoHeader() {
+const SeoHeader = () =>{
   return (
     <Helmet>
       <title>{seo.title}</title>

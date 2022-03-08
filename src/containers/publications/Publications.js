@@ -1,16 +1,15 @@
 import React from "react";
-import PublicationCard from "../../components/publicationsCard/PublicationCard";
-import { publications } from "../../portfolio.js";
-import "./Publications.css";
 import {Fade} from "react-reveal";
+import { publications } from "../../portfolio.js";
+import PublicationCard from "../../components/publicationCard/PublicationCard";
+import "./Publications.css";
 
-export default function Publications (props){
+const Publications = (props) => {
 //	const pubs= publications.data;
-    if (!publications.display) {
-      return null;
-    }
-    const theme= props.theme;
-    console.log(publications)
+  const theme= props.theme;
+  if (!publications.display) {
+    return null;
+  }
 	return(
 	<div>
 	    <div className="basic-projects">
@@ -35,9 +34,11 @@ export default function Publications (props){
         </div>
         <div className="repo-cards-div-main">
           {publications.publications.data.map((pubs) => {
-            return <PublicationCard repo={pubs} theme={theme} />;
+            return <PublicationCard publication={pubs} theme={theme} key={pubs.title}/>;
           })}
         </div>
      </div>   
 	)	
 }	
+
+export default Publications;

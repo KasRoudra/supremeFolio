@@ -1,14 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import ExperienceImg from "./ExperienceImg";
 import { experience } from "../../portfolio.js";
 import "./ExperienceSection.css";
 
-class ExperienceSection extends Component {
-	render() {
-		
-    const theme= this.props.theme;
-    
+const ExperienceSection = (props) => {
+    const theme= props.theme;
     return (
       <div className="basic-experience">
           <Fade bottom duration={2000} distance="40px">
@@ -44,7 +41,6 @@ class ExperienceSection extends Component {
           </Fade>
         </div>
     );
-  }
 }
 
 export default ExperienceSection;

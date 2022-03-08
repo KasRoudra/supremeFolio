@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class DataScienceImg extends Component {
-  render() {
-    const theme = this.props.theme;
+const DataScienceImg = (props) => {
+    const theme = props.theme;
     return (
       <svg
         id="fa973782-3a18-4630-a762-87130b613ac3"
@@ -310,5 +309,6 @@ export default class DataScienceImg extends Component {
         />
       </svg>
     );
-  }
 }
+
+export default DataScienceImg;

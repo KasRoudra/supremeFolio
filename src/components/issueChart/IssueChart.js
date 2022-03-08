@@ -1,13 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Fade } from "react-reveal";
 import IssueData from "../../shared/opensource/issues.json";
 import {openSource} from "../../portfolio";
 import "./IssueChart.css";
 
-class IssueChart extends Component {
-  render() {
-    const theme = this.props.theme;
+const IssueChart = (props) => {
+    const theme = props.theme;
     const data = {
       labels: ["Open", "Closed"],
       datasets: [
@@ -46,7 +45,6 @@ class IssueChart extends Component {
         />
       </div>
     );
-  }
 }
 
 export default IssueChart;

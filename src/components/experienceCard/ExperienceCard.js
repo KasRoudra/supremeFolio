@@ -1,14 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import "./ExperienceCard.css";
 
-class ExperienceCard extends Component {
-  render() {
-    const experience = this.props.experience;
-    const theme = this.props.theme;
+const ExperienceCard = (props) => {
+    const { theme, experience } = props;
     return (
       <div
         className="experience-card"
-        style={{ border: `1px solid ${experience["color"]}`, backgroundColor: theme.dark }}
+        style={{ border: `1px solid ${experience["color"]}`, backgroundColor: theme.headerColor }}
       >
         <div className="experience-card-logo-div">
           <img
@@ -22,13 +20,13 @@ class ExperienceCard extends Component {
             <div className="experience-card-heading-left">
               <h3
                 className="experience-card-title"
-                style={{ color: theme.text }}
+                style={{ color: theme.body }}
               >
                 {experience["title"]}
               </h3>
               <p
                 className="experience-card-company"
-                style={{ color: theme.text }}
+                style={{ color: theme.dark }}
               >
                 <a
                   href={experience["company_url"]}
@@ -42,13 +40,13 @@ class ExperienceCard extends Component {
             <div className="experience-card-heading-right">
               <p
                 className="experience-card-duration"
-                style={{ color: theme.secondaryText }}
+                style={{ color: theme.body }}
               >
                 {experience["duration"]}
               </p>
               <p
                 className="experience-card-location"
-                style={{ color: theme.secondaryText }}
+                style={{ color: theme.dark }}
               >
                 {experience["location"]}
               </p>
@@ -56,14 +54,13 @@ class ExperienceCard extends Component {
           </div>
           <p
             className="experience-card-description"
-            style={{ color: theme.text }}
+            style={{ color: theme.body }}
           >
             {experience["description"]}
           </p>
         </div>
       </div>
     );
-  }
 }
 
 export default ExperienceCard;

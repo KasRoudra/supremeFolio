@@ -1,20 +1,16 @@
-import React, { Component } from "react";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
-import TopButton from "../../components/topButton/TopButton";
-import Error404 from "../../containers/error404/Error404";
+import React from "react";
+import { Header, TopButton, Footer } from "../../components";
+import { Error404 } from "../../containers";
 
-class Error extends Component {
-    render() {
-    const theme = this.props.theme;
+const Error = (props) => {
+    const theme = props.theme;
     return (
-    <div className="Pages">
+    <div className="main-page">
         <Header theme={theme} />
         <Error404 theme={theme} />
         <Footer theme={theme} />
         <TopButton theme={theme} />
       </div>
     );
-  }
 }
 export default Error;

@@ -1,26 +1,16 @@
 import React from "react";
-import "./Blog.css";
-import BlogCard from "../../components/blogCard/BlogCard";
-import {blogSection, usernames} from "../../portfolio";
-import MediumBlogs from "../../shared/blogs.json";
 import {Fade} from "react-reveal";
+import {blogSection} from "../../portfolio";
+import BlogCard from "../../components/blogCard/BlogCard";
+import MediumBlogs from "../../shared/blogs.json";
+import "./Blog.css";
 
 export default function Blogs(props) {
   const theme = props.theme;
   var mediumSuccess;
-  var showMedium;
-  if (usernames.medium!=="none"){
-      showMedium = true;
-  }
-  else {
-      showMedium = false;
-  }
-  if (!blogSection.display) {
-    if (!showMedium){
-      return null;
-    }
-  }
-  if (MediumBlogs.items.length===0){
+  const blogtype = blogSection.display;
+  if (["none", "medium", "hardcoded"].indexOf(blogtype) === -1) return null;
+  if (blogtype === "none" ) {
       return null;
   }
   if (MediumBlogs.status==="ok" || MediumBlogs.items!=null){
@@ -56,7 +46,7 @@ export default function Blogs(props) {
         </div>
         <div className="blog-main-div">
           <div className="blog-text-div">
-            {!showMedium || mediumSuccess === false
+            {blogtype==="hardcoded" || mediumSuccess === false
               ? blogSection.blogs.map((blog, i) => {
                   return (
                     <BlogCard
@@ -77,7 +67,7 @@ export default function Blogs(props) {
                       key={i}
                       theme={theme}
                       blog={{
-                        url: blog.url,
+                        url: blog.link,
                         title: blog.title,
                         description: extractTextContent(blog.content)
                       }}

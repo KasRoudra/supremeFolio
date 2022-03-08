@@ -1,11 +1,11 @@
 import React from "react";
-import "./Greeting.css";
-import Button from "../../components/button/Button";
-import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
+import { greeting } from "../../portfolio";
+import Button from "../../components/button/Button";
 import FeelingProud from "./FeelingProud";
+import "./Greeting.css";
 
-export default function Greeting(props) {
+const Greeting = (props) => {
   const theme = props.theme;
   return (
     <Fade bottom duration={2000} distance="40px">
@@ -54,3 +54,5 @@ export default function Greeting(props) {
     </Fade>
   );
 }
+
+export default Greeting;

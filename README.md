@@ -14,8 +14,8 @@
 <br>
 -->
 
-  [![NodeJS](https://img.shields.io/badge/node-12.14.1-important?style=flat-square/)](https://nodejs.org/en/blog/release/v12.13.0/)
-  [![NPM](https://img.shields.io/badge/npm-6.13.7-blueviolet?style=flat-square)](https://www.npmjs.com/package/npm/v/6.13.4)
+  [![NodeJS](https://img.shields.io/badge/node-17.6.0-important?style=flat-square/)](https://nodejs.org/en/blog/release/v17.6.0/)
+  [![NPM](https://img.shields.io/badge/npm-8.5.1-blueviolet?style=flat-square)](https://www.npmjs.com/package/npm/v/8.5.1)
   [![Made With React](https://img.shields.io/badge/Made%20With-React-61DAFB?style=flat-square)](https://reactjs.org/)
   [![Author](https://img.shields.io/badge/Author-KasRoudra-purple?style=flat-square)](https://github.com/KasRoudra)
   [![Opensource](https://img.shields.io/badge/Open%20Source-Yes-cyan?style=flat-square)](./LICENSE)
@@ -150,27 +150,28 @@ const socialMediaLinks = {
 
 You can change the personal information, experience, education, social media, certifications, blog information, contact information, podcasts, talks etc. in `src/portfolio.js` to directly reflect them in portfolio website.
 
-### Github Information
+### Github Information and blogs
 
-You need to use your github username and a github token to fetch and show your information about opensource contributions
+You need to use your github username and a github token to fetch and show your information about opensource contributions. Your medium username is required to fetch medium blogs.
 
 You can get a github token as described [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). The token we need, requires no permission. So you don't need to check any box while generating token. But make sure your token do not expire very soon. 
 
 Now, you've 2 options. 
-- If you are using [vercel](https://vercel.com) or [netlify](https://netlify.com) or similar site for your site's build, you can use environment variables. That environment variables are `GITHUB_TOKEN` and `GITHUB_USERNAME`. You can also use environment variables locally. You need to create a .env file or use our template by `cp env.example .env`. Then apply your username and token in that.
+- If you are using [vercel](https://vercel.com) or [netlify](https://netlify.com) or similar site for your site's build, you can use environment variables. That environment variables are `GITHUB_TOKEN` and `GITHUB_USERNAME` and  `MEDIUM_USERNAME`. You can also use environment variables locally. You need to create a .env file or use our template by `cp env.example .env`. Then apply your username and token in that.
 
 ```env
 GITHUB_TOKEN = "YOUR GITHUB TOKEN HERE"
 GITHUB_USERNAME = "YOUR GITHUB USERNAME HERE"
-
+MEDIUM_USERNAME = "YOUR MEDIUM USERNAME HERE"
 ```
 
 - You will find `fetcher.mjs` file in the main directory of the repository. This file is used to fetch the data (Pull requests, Issues, Organizations, Pinned projects etc.) from your github.
 If you open the file, you will see below component at the top of the file. You need to change only that component.
 
 ```javascript
-const githubConvertedToken: "Your Github Token Here.",
-const githubUserName: "Your Github Username Here.",
+var githubConvertedToken: "Your Github Token Here.",
+var githubUserName: "Your Github Username Here.",
+var mediumUserName = "Your Medium Username Here";
 ```
 
 If you are only using static builds and do not contribute frequently in github you can use your name and tokens directly in `fetcher.mjs`.
@@ -181,7 +182,7 @@ node fetcher.mjs
    
 **Warning:** Treat your tokens like passwords and keep them secret. When working with the API, use tokens as environment variables instead of hardcoding them into your programs. If you've used your token in `fetcher.mjs` make sure not to upload that.
 
-This will fetch all the data from your github and it will automatically replace my data with yours.
+This will fetch all the data from your github and medium and it will automatically replace my data with yours.
 Whenever you want to update the github related information on the website you need to run this command.
 
 Note: Github Projects section only show pinned items of your GitHub.
@@ -195,7 +196,8 @@ If the above solution still doesn't work, visit the [wiki page](https://github.c
 
 Note here that if you click [my portfolio](https://KasRoudra.github.io), you can see animated loading at the beginning. That is collected from developerFolio. This loading screen is universal and you can use it. But if you want to change it, you have below two alternatives:
 
-- If you want to design your own logo, then you can design it using `Figma` or `Adobe XD` or `Adobe Illustrator` or `Inkscape`. If you want to animate it, you can refer to `./src/components/Loader` directory which contains `js` and `css` files which animates the logo.
+- If you want to design your own logo, then you can design it using `Figma` or `Adobe XD` or `Adobe Illustrator` or `Inkscape`. If you want to animate it, you can refer to `./src/components/Loader` directory which contains `js` and `css` files which animates the logo. You should set `useLottie` to false in case you do so. Also if you want some prebuilt animations you can download that from [lotti](https://lottiefiles.com/featured) and place them in `src/assets/lottie` folder. Then set the filename in `portfolio.js` and enable `useLottie`. That's it!
+
 - If you don't want Splash screen or you don't know how to design logo, then this option is for you.
 
   - You can open `src/portfolio.js` file and at the top of this file you will see `pageEnabled` component as below:
@@ -207,7 +209,7 @@ Note here that if you click [my portfolio](https://KasRoudra.github.io), you can
     ```
   - Change `splash` from `true` to `false`.
   - Now, if you see your website using `npm start`, it will directly open `home` rather than animating logo `splash` screen.
-  - If you design your logo in future, then edit the files in `./src/components/Loader` and then revert `splash` to `true` in `src/portfolio.js`.
+  - If you design your logo in future, then edit the files in `./src/components/Loader` and then revert `splash` to `true` and `useLottie` to `false` in `src/portfolio.js`.
 
 ### Other
 

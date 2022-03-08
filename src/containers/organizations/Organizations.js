@@ -1,17 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
+import {openSource} from "../../portfolio";
 import OrganizationList from "../../components/organizationList/OrganizationList";
 import OrganizationsData from "../../shared/opensource/organizations.json";
-import {openSource} from "../../portfolio";
 import "./Organizations.css";
 
-class Organizations extends Component {
-  render() {
-    const theme = this.props.theme;
-    if (OrganizationsData.data.length === 0){
-    	return null;
-    }
-    if(!openSource.organizations){
+const Organizations = (props) => {
+    const theme = props.theme;
+    if (OrganizationsData.data.length === 0 || !openSource.organizations){
     	return null;
     }	
     return (
@@ -26,7 +22,6 @@ class Organizations extends Component {
         <OrganizationList logos={OrganizationsData["data"]} />
       </div>
     );
-  }
 }
 
 export default Organizations;

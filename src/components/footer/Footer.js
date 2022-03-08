@@ -1,10 +1,10 @@
 import React from "react";
-import "./Footer.css";
 import { Fade } from "react-reveal";
 import { greeting } from "../../portfolio.js";
+import "./Footer.css";
 /* eslint-disable jsx-a11y/accessible-emoji */
 
-export default function Footer(props) {
+const Footer = (props) => {
 	const theme= props.theme;
   return (
     <div className="footer-div" style={{ backgroundColor: theme.body }}>
@@ -17,3 +17,5 @@ export default function Footer(props) {
     </div>
   );
 }
+
+export default Footer;

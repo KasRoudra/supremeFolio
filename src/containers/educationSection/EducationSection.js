@@ -1,12 +1,12 @@
-import React, {Component} from "react";
+import React from "react";
+import { Fade } from "react-reveal";
+import { competitiveSites } from "../../portfolio";
 import EducationImg from "./EducationImg";
 import CompetitiveSites from "../../containers/competitiveSites/CompetitiveSites";
-import { Fade } from "react-reveal";
 import "./EducationSection.css";
 
-class EducationSection extends Component {
-	render() {
-    const theme = this.props.theme;
+const EducationSection = (props) => {
+    const theme = props.theme;
     return (
         <div className="basic-education">
           <Fade bottom duration={2000} distance="40px">
@@ -22,13 +22,12 @@ class EducationSection extends Component {
                 <h1 className="heading-text" style={{ color: theme.text }}>
                   Education
                 </h1>
-                <CompetitiveSites theme={theme} />
+                {competitiveSites.display && (<CompetitiveSites theme={theme} />)}
               </div>
             </div>
           </Fade>
       </div>
     );
-  }
 }
 
 export default EducationSection;

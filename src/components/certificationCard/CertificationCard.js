@@ -1,11 +1,9 @@
-import React, { Component } from "react";
-import "./CertificationCard.css";
+import React from "react";
 import { Fade } from "react-reveal";
+import "./CertificationCard.css";
 
-class CertificationCard extends Component {
-  render() {
-    const certificate = this.props.certificate;
-    const theme = this.props.theme;
+const CertificationCard = (props) => {
+    const { theme, certificate} = props;
     return (
       <Fade bottom duration={2000} distance="20px">
         <div className="cert-card">
@@ -47,7 +45,6 @@ class CertificationCard extends Component {
         </div>
       </Fade>
     );
-  }
 }
 
 export default CertificationCard;

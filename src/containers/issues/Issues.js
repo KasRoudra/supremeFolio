@@ -1,22 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
+import {openSource} from "../../portfolio";
 import IssueCard from "../../components/issueCard/IssueCard";
 import IssuesData from "../../shared/opensource/issues.json";
-import {openSource} from "../../portfolio";
 import "./Issues.css";
 
-class Issues extends Component {
-  render() {
-    const theme = this.props.theme;
+const Issues = (props) => {
+    const theme = props.theme;
     
-    if (IssuesData.data.length === 0){
+    if (IssuesData.data.length === 0 || !openSource.issues){
     	return null;
-    }
-    
-    if(!openSource.issues){
-    	return null;
-    }	
-    
+    }  
+
     return (
       <div>
         <div className="issues-header-div">
@@ -33,7 +28,6 @@ class Issues extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Issues;

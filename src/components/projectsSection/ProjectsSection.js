@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import GithubRepoCard from "../githubRepoCard/GithubRepoCard";
 import { Fade } from "react-reveal";
 import {projects} from "../../portfolio";
@@ -7,17 +7,13 @@ import ProjectsImg from "./ProjectsImg";
 import "./ProjectsSection.css";
 
 
-class ProjectsSection extends Component {
-  render() {
-    const theme = this.props.theme;
+const ProjectsSection = (props) => {
+    const theme = props.theme;
     
-    if(ProjectsData.data.length===0){
+    if(ProjectsData.data.length===0 || !projects.display){
     	return null;
     }
-    
-    if (!projects.display){
-    	return null;
-    }	
+
     return (
         <div>
         <div className="basic-projects">
@@ -54,7 +50,6 @@ class ProjectsSection extends Component {
         </div>
         </div>
     );
-  }
 }
 
 export default ProjectsSection;

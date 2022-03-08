@@ -1,19 +1,17 @@
 import React from "react";
 import "./TalkCard.css";
 
-export default function TalkCard({talkDetails}) {
+const TalkCard = (props) => {
+  const { theme, talkDetails } = props;
   return (
     <div>
       <div className="container">
         <div
-          className={
-            talkDetails.isDark ? "dark-rectangle rectangle" : "rectangle"
-          }
+          className="rectangle"
         >
           <div className="diagonal-fill"></div>
-          <div className="talk-card-title">{talkDetails.title}</div>
-          <p className="talk-card-subtitle">{talkDetails.subtitle}</p>
-
+          <div className="talk-card-title" style={{ color: theme.text }}>{talkDetails.title}</div>
+          <p className="talk-card-subtitle" style={{ color: theme.secondaryText }}>{talkDetails.subtitle}</p>
           <div className="card-footer-button-div">
             <a href={talkDetails.slides_url} target="_" className="talk-button">
               Slides
@@ -27,3 +25,5 @@ export default function TalkCard({talkDetails}) {
     </div>
   );
 }
+
+export default TalkCard;

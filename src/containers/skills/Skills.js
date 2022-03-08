@@ -1,8 +1,8 @@
 import React from "react";
-import "./Skills.css";
-import SkillSection from "./SkillSection";
 import { Fade } from "react-reveal";
 import TechStack from "../../components/techStack/TechStack";
+import SkillSection from "./SkillSection";
+import "./Skills.css";
 
 
 export default function Skills(props) {

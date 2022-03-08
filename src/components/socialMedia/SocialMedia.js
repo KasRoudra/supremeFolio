@@ -1,7 +1,7 @@
 import React from "react";
-import "./SocialMedia.css";
-import { socialMediaLinks } from "../../portfolio";
 import styled from "styled-components";
+import { socialMediaLinks } from "../../portfolio";
+import "./SocialMedia.css";
 
 const IconWrapper = styled.span`
   i {
@@ -12,7 +12,7 @@ const IconWrapper = styled.span`
     transition: 0.3s ease-in;
   }
 `;
-export default function SocialMedia(props) {
+const SocialMedia = (props) => {
 	
   return (
     <div className="social-media-div">
@@ -35,3 +35,5 @@ export default function SocialMedia(props) {
     </div>
   );
 }
+
+export default SocialMedia;

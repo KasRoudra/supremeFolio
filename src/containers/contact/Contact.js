@@ -1,29 +1,27 @@
 import React from "react";
-import "./Contact.css";
+import { contactPageData } from "../../portfolio";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import { contactInfo } from "../../portfolio";
-import StyleContext from "../../contexts/StyleContext";
+import "./Contact.css";
 
-export default function Contact() {
-	const {isDark} = useContext(StyleContext);
+const Contact = () => {
   return (
     <div className="main contact-margin-top" id="contact">
       <div className="contact-div-main">
         <div className="contact-header">
-          <h1 className="heading contact-title">{contactInfo.title}</h1>
-          <p className="subTitle contact-subtitle">{contactInfo.subtitle}</p>
+          <h1 className="heading contact-title">{contactPageData.title}</h1>
+          <p className="subTitle contact-subtitle">{contactPageData.subtitle}</p>
 
           <div className="contact-text-div">
-            <a className="contact-detail" href={"tel:" + contactInfo.number}>
-              {contactInfo.number}
+            <a className="contact-detail" href={"tel:" + contactPageData.number}>
+              {contactPageData.number}
             </a>
             <br />
             <br />
             <a
               className="contact-detail-email"
-              href={"mailto:" + contactInfo.email_address}
+              href={"mailto:" + contactPageData.email_address}
             >
-              {contactInfo.email_address}
+              {contactPageData.email_address}
             </a>
             <br />
             <br />
@@ -40,3 +38,5 @@ export default function Contact() {
     </div>
   );
 }
+
+export default Contact;

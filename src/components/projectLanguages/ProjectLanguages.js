@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import "./ProjectLanguages.css";
+import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import "./ProjectLanguages.css";
 
-class ProjectLanguages extends Component {
-  render() {
+const ProjectLanguages = (props) => {
+	const logos = props.logos;
     return (
       <div>
         <div className="software-skills-main-div">
           <ul className="dev-icons-languages">
-            {this.props.logos.map((logo) => {
+            {logos.map((logo) => {
               return (
                 <OverlayTrigger
                   key={logo.name}
@@ -36,7 +36,6 @@ class ProjectLanguages extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default ProjectLanguages;
