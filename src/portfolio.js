@@ -438,7 +438,7 @@ const bigProjects = {
 };
 
 const blogSection = {
-  display: "none", // Set it none to hide blogs or set it to hardcdoded for following blogs
+  display: "none", // Set it none to hide blogs or set it to hardcdoded for following blogs otherwise you can set it to medium to show your fetched(if you used your username for fetcher.mjs) medium blogs
   title: "Blogs",
   subtitle:
   "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
