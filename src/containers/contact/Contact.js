@@ -9,10 +9,15 @@ const Contact = () => {
       <div className="contact-div-main">
         <div className="contact-header">
           <h1 className="heading contact-title">{contactPageData.title}</h1>
-          <p className="subTitle contact-subtitle">{contactPageData.subtitle}</p>
+          <p className="subTitle contact-subtitle">
+            {contactPageData.subtitle}
+          </p>
 
           <div className="contact-text-div">
-            <a className="contact-detail" href={"tel:" + contactPageData.number}>
+            <a
+              className="contact-detail"
+              href={"tel:" + contactPageData.number}
+            >
               {contactPageData.number}
             </a>
             <br />
@@ -37,6 +42,6 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Contact;

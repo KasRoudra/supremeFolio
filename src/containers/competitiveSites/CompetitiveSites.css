@@ -27,8 +27,8 @@
 .competitive-sites-inline > i:hover {
   color: #645beb;
 }
-@media(max-width: 768px){
-	.heading-sub-text{
-		font-size: 23px;
-	}	
-}	
+@media (max-width: 768px) {
+  .heading-sub-text {
+    font-size: 23px;
+  }
+}

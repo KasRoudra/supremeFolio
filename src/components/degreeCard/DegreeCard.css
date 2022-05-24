@@ -93,7 +93,6 @@
   float: right;
 }
 
-
 .btn-text {
   margin: 0px;
   padding: 0px;
@@ -102,12 +101,12 @@
 }
 
 @media (max-width: 1380px) {
-	.card-title{
-		font-size: 22px;
-	}
-	.card-subtitle{
-		font-size: 20px;
-	}	
+  .card-title {
+    font-size: 22px;
+  }
+  .card-subtitle {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 768px) {

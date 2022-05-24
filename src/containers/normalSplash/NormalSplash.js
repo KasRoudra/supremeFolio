@@ -3,10 +3,9 @@ import { splashScreen } from "../../portfolio";
 import LoaderLogo from "../../components/loader/LoaderLogo.js";
 import "./NormalSplash.css";
 
-
 const NormalSplash = (props) => {
   const theme = props.theme;
-  if(splashScreen.useLottie) return null;
+  if (splashScreen.useLottie) return null;
   return (
     <div className="logo_wrapper">
       <div className="screen" style={{ backgroundColor: theme.body }}>
@@ -14,6 +13,6 @@ const NormalSplash = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default NormalSplash;

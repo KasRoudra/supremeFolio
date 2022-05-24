@@ -1,7 +1,7 @@
 import React from "react";
 import "./Input.css";
 
-const Input = ({name, type, placeholder, height, onChange}) => {
+const Input = ({ name, type, placeholder, height, onChange }) => {
   return (
     <div className="mb-1 col-md-12 input-main">
       <div className="form-floating">
@@ -12,7 +12,7 @@ const Input = ({name, type, placeholder, height, onChange}) => {
           name={name}
           type={type}
           className="form-control form-control-lg"
-          style={{height: height}}
+          style={{ height: height }}
         ></textarea>
         <label></label>
       </div>

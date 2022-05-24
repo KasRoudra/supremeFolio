@@ -16,10 +16,10 @@ const Greeting = (props) => {
               <h1 className="greeting-text" style={{ color: theme.text }}>
                 {greeting.title}
               </h1>
-              {greeting.nickname!==null &&(
-              <h2 className="greeting-nickname" style={{ color: theme.text }}>
-                ( {greeting.nickname} )
-              </h2>
+              {greeting.nickname !== null && (
+                <h2 className="greeting-nickname" style={{ color: theme.text }}>
+                  ( {greeting.nickname} )
+                </h2>
               )}
               <p
                 className="greeting-text-p subTitle"
@@ -53,6 +53,6 @@ const Greeting = (props) => {
       </div>
     </Fade>
   );
-}
+};
 
 export default Greeting;

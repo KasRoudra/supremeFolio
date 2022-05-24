@@ -4,7 +4,6 @@ import TechStack from "../../components/techStack/TechStack";
 import SkillSection from "./SkillSection";
 import "./Skills.css";
 
-
 export default function Skills(props) {
   const theme = props.theme;
   return (
@@ -17,7 +16,7 @@ export default function Skills(props) {
         </Fade>
       </div>
       <SkillSection theme={theme} />
-      <TechStack theme={theme} /> 
+      <TechStack theme={theme} />
     </div>
   );
 }

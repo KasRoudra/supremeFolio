@@ -18,7 +18,7 @@ function timeOut() {
 var widthScreen = window.screen.width;
 
 const Twitter = () => {
-  if (twitterUsername!=="none") {
+  if (twitterUsername !== "none") {
     return (
       <Suspense fallback={renderLoader()}>
         <div className="tw-main-div" id="twitter">
@@ -26,7 +26,7 @@ const Twitter = () => {
             <TwitterTimelineEmbed
               sourceType="profile"
               screenName={twitterUsername}
-              options={{height: 400, width: {widthScreen}}}
+              options={{ height: 400, width: { widthScreen } }}
               placeholder={renderLoader()}
               autoHeight={false}
               borderColor="#fff"
@@ -42,6 +42,6 @@ const Twitter = () => {
   } else {
     return null;
   }
-}
+};
 
 export default Twitter;

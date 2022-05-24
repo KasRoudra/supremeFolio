@@ -9,17 +9,23 @@ const Achievement = (props) => {
   //   win.focus();
   // }
   const theme = props.theme;
-  if (!certifications.display){
-  	return null;
-  }	
+  if (!certifications.display) {
+    return null;
+  }
   return (
     <div className="main" id="achievements">
       <div className="achievement-main-div">
         <div className="achievement-header">
-          <h1 className="heading achievement-heading" style={{ color: theme.text }}>
+          <h1
+            className="heading achievement-heading"
+            style={{ color: theme.text }}
+          >
             {certifications.title}
           </h1>
-          <p className="subTitle achievement-subtitle" style={{ color: theme.secondaryText }}>
+          <p
+            className="subTitle achievement-subtitle"
+            style={{ color: theme.secondaryText }}
+          >
             {certifications.subtitle}
           </p>
         </div>
@@ -41,6 +47,6 @@ const Achievement = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default Achievement;

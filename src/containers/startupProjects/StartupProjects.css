@@ -1,6 +1,6 @@
-.startup-main{
-	overflow: hidden;
-}	
+.startup-main {
+  overflow: hidden;
+}
 .startup-projects-main {
   display: flex;
 }
@@ -36,7 +36,6 @@
   cursor: pointer;
 }
 
-
 .card-image {
   max-width: 100%;
   height: auto;
@@ -55,11 +54,11 @@
   line-height: 1.5rem;
 }
 .projects-title {
-	text-align: center;
+  text-align: center;
 }
 
-.project-subtitle{
-	text-align: center;
+.project-subtitle {
+  text-align: center;
 }
 .project-card {
   display: flex;

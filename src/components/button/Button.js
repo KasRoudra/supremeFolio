@@ -32,6 +32,6 @@ const Button = ({ text, className, href, newTab, theme }) => {
       </a>
     </div>
   );
-}
+};
 
 export default Button;

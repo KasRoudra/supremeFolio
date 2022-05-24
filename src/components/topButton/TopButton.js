@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./TopButton.css";
 
 const TopButton = (props) => {
   const { theme } = props;
+  const buttonRef = useRef();
+  const arrowRef = useRef();
+  
   function GoUpEvent() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
 
   function scrollFunction() {
+    const topButton = buttonRef.current;
     if (
       document.body.scrollTop > 30 ||
       document.documentElement.scrollTop > 30
     ) {
-      document.getElementById("topButton").style.visibility = "visible";
+      topButton.style.visibility = "visible";
     } else {
-      document.getElementById("topButton").style.visibility = "hidden";
+      topButton.style.visibility = "hidden";
     }
   }
 
@@ -24,25 +28,27 @@ const TopButton = (props) => {
   };
 
   const onMouseEnter = (color, bgColor) => {
+    const topButton = buttonRef.current;
+    const arrow = arrowRef.current;
+    
     /* For the button */
-    const topButton = document.getElementById("topButton");
     topButton.style.color = color;
     topButton.style.backgroundColor = bgColor;
 
     /* For arrow icon */
-    const arrow = document.getElementById("arrow");
     arrow.style.color = color;
     arrow.style.backgroundColor = bgColor;
   };
 
   const onMouseLeave = (color, bgColor) => {
+    const topButton = buttonRef.current;
+    const arrow = arrowRef.current;
+
     /* For the button */
-    const topButton = document.getElementById("topButton");
     topButton.style.color = color;
     topButton.style.backgroundColor = bgColor;
 
     /* For arrow icon */
-    const arrow = document.getElementById("arrow");
     arrow.style.color = color;
     arrow.style.backgroundColor = bgColor;
   };
@@ -50,7 +56,8 @@ const TopButton = (props) => {
   return (
     <div
       onClick={GoUpEvent}
-      id="topButton"
+      className="topButton"
+      ref={buttonRef}
       style={{
         color: theme.body,
         backgroundColor: theme.text,
@@ -60,9 +67,9 @@ const TopButton = (props) => {
       onMouseEnter={() => onMouseEnter(theme.text, theme.body)}
       onMouseLeave={() => onMouseLeave(theme.body, theme.text)}
     >
-      <i className="fas fa-arrow-up" id="arrow" aria-hidden="true" />
+      <i className="fas fa-arrow-up" ref={arrowRef} aria-hidden="true" />
     </div>
   );
-}
+};
 
 export default TopButton;

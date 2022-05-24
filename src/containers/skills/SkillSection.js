@@ -16,11 +16,11 @@ function GetSkillSvg(props) {
   else if (props.imageName === "FullStackImg")
     return <FullStackImg theme={props.theme} />;
   else if (props.imageName === "AppDevelopImg")
-     return <AppDevelopImg theme={props.theme} />;    
+    return <AppDevelopImg theme={props.theme} />;
   else if (props.imageName === "CloudInfraImg")
-     return <CloudInfraImg theme={props.theme} />;       
+    return <CloudInfraImg theme={props.theme} />;
   else if (props.imageName === "DataScienceImg")
-     return <DataScienceImg theme={props.theme} />;       
+    return <DataScienceImg theme={props.theme} />;
   return <DesignImg theme={props.theme} />;
 }
 

@@ -1,82 +1,58 @@
-/*Blog Cards Layout*/
-
 .square {
-  width: 440px;
-  height: 430px;
-  background: #17as12;
-  border-radius: 4px;
-  box-shadow: 0px 20px 50px #ffffff;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  margin-top: 30px;
-}
-
-.square:hover {
-  box-shadow: 0 20px 40px #000000;
-}
-
-.blog-header-text {
-	text-align: center;
-  font-size: 56px;
-  font-weight: 400;
-  margin-top: 20px;
-}
-
-.blog-subtitle {
-  text-transform: uppercase;
-}
-.blog-main-div > * {
-  flex: 1;
-  margin-bottom: -10px;
-}
-.blog-main-div {
-  display: flex;
-}
-.blog-image-div > img {
-  max-width: 100%;
-  height: auto;
-}
-.blog-text-div {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 32px;
-}
-.blog-subTitle {
-  text-align:center;
-  margin-top: 25px;
-}
-
-/* Media Query */
-@media (max-width: 1380px) {
+    width: 440px;
+    height: 430px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0px 20px 50px #d9dbdf;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+  }
+  
+  .square:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+  
   .blog-header-text {
-    font-size: 40px;
+    font-size: 56px;
+    font-weight: 400;
   }
-  .blog-subTitle{  	
-  	margin-bottom: 30px;
+  
+  .blog-subtitle {
+    text-transform: uppercase;
   }
- .blog-main-div {
+  .blog-main-div > * {
     flex: 1;
-    margin-top: 0px;
+    margin-bottom: 30px;
   }
-}
-@media (max-width: 768px) {
-  .blog-header-text {
-    font-size: 30px;
-    text-align: center;
-    margin-top: -40px;
+  .blog-main-div {
+    display: flex;
   }
-  .blog-subTitle {
-    font-size: 16px;
-    line-height: normal;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+  .blog-image-div > img {
+    max-width: 100%;
+    height: auto;
   }
-}
-
-@media screen and (max-width: 480px) and (min-width: 300px) {
   .blog-text-div {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
-}
+  
+  /* Media Query */
+  @media (max-width: 1380px) {
+    .blog-header-text {
+      font-size: 40px;
+    }
+  }
+  @media (max-width: 768px) {
+    .blog-header-text {
+      font-size: 30px;
+      text-align: center;
+    }
+    .blog-subtitle {
+      font-size: 16px;
+      line-height: normal;
+      text-align: center;
+    }
+  }

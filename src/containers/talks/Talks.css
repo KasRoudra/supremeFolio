@@ -1,18 +1,18 @@
-.talks-main{
-	overflow: hidden;
-}	
+.talks-main {
+  overflow: hidden;
+}
 .talk-header-title {
-  text-align: center;	
+  text-align: center;
   font-size: 45px;
   font-weight: 400;
   line-height: 0px;
 }
 
 .talk-header-subtitle {
-	margin-top: 40px;
-	font-size: 20px;
-	margin-bottom: -20px;
-	text-align:center;
+  margin-top: 40px;
+  font-size: 20px;
+  margin-bottom: -20px;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .talk-header-title {

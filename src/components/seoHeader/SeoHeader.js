@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { seo } from "../../portfolio.js";
 
-const SeoHeader = () =>{
+const SeoHeader = () => {
   return (
     <Helmet>
       <title>{seo.title}</title>
@@ -12,6 +12,6 @@ const SeoHeader = () =>{
       <meta property="og:url" content={seo?.og?.url} />
     </Helmet>
   );
-}
+};
 
 export default SeoHeader;

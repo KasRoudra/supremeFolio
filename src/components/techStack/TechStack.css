@@ -1,10 +1,10 @@
-.techMain{
-	margin-bottom: 0px;
-	overflow: hidden;
-}	
+.techMain {
+  margin-bottom: 0px;
+  overflow: hidden;
+}
 
 .techstack-heading {
-	text-align: center;
+  text-align: center;
   font-size: 45px;
   font-weight: 400;
   font-family: "Google Sans Regular";
@@ -34,7 +34,7 @@
   border-bottom-right-radius: 6px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-color:  #aaa5ff;
+  background-color: #aaa5ff;
   position: relative;
   overflow: hidden;
 }
@@ -87,7 +87,6 @@
     order: 2;
   }
 }
-
 
 /* Media Query */
 @media (max-width: 1380px) {

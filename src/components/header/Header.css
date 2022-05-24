@@ -15,8 +15,8 @@
   /* background-color: #fff; */
 }
 
-.header ul li{
-	margin-top: -5px;
+.header ul li {
+  margin-top: -5px;
 }
 
 .grey-color {
@@ -24,10 +24,10 @@
 }
 
 .switch {
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-	margin-right: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .header li a {
@@ -153,8 +153,8 @@
   .header .menu-icon {
     display: none;
   }
- .switch {
- 	margin-top: 15px;
- 	margin-left: 5px;
- }	
+  .switch {
+    margin-top: 15px;
+    margin-left: 5px;
+  }
 }

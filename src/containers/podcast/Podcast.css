@@ -1,7 +1,7 @@
-.podcast-main{
-	overflow: hidden;
+.podcast-main {
+  overflow: hidden;
   padding-top: 50px;
-}	
+}
 .podcast-header-title {
   font-size: 45px;
   font-weight: 400;
@@ -9,9 +9,9 @@
   margin-top: 30px;
   margin-bottom: 40px;
 }
-.podcast-header-subtitle{
-	margin-bottom: 30px;
-}	
+.podcast-header-subtitle {
+  margin-bottom: 30px;
+}
 .podcast {
   width: 600px;
 }
@@ -44,22 +44,22 @@
     text-align: center;
   }
 }
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .podcast-header-title {
     text-align: center;
     font-size: 30px;
   }
   .podcast-header-subtitle {
-    margin-top: 30px;	
+    margin-top: 30px;
     font-size: 20px;
     text-align: center;
   }
 
   .podcast {
-    margin-top: 20px;	
+    margin-top: 20px;
     width: 600px;
   }
   .podcast-main-div {
     text-align: center;
-  }	
+  }
 }

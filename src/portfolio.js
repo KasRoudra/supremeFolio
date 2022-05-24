@@ -16,40 +16,38 @@ Credits: masterPortfolio(https://github.com/ashutosh1919/masterPortfolio)
          developerFolio(https://github.com/saadpasta/developerFolio)
 */
 
-
 // Website related settings
 // Which pages will be enabled
 
-
-
 const pageEnabled = {
-
   splash: true, // Change this to false if you don't want Splash screen
 
   education: true, // Change this to false if you don't want education (degrees, certifications, competitiveSites) page
 
   projects: true, // Change this to false if you don't want projects (from github data) and publications page
 
-  opensource : true, // Change this to false if you don't want opensource contribution (from github data) page
+  opensource: true, // Change this to false if you don't want opensource contribution (from github data) page
 
   hobbies: true, // Change this to false if you don't want hobbies page
 
   experience: false, // Change this to false if you don't want experience page
-  
+
   contact: true, // Change this to false if you don't want contact page
 };
 
 // Routing with or without '#'
-const routerValue = "HashRouter"; /* Supported values:
+const routerValue =
+  "HashRouter"; /* Supported values:
  					1. HashRouter(for github hosted user Pages)
  					2. BrowserRouter (for regular hosting)
  					*/
- 					
+
 // Splash Screen
 
 const splashScreen = {
-	useLottie: true, // setting it false will show animation of src/components/loader
-  animationFile: "starLoading", /* Supported Values
+  useLottie: true, // setting it false will show animation of src/components/loader
+  animationFile:
+    "starLoading" /* Supported Values
     					             1. splashAnimation
     					             2. email
     					             3. build
@@ -61,19 +59,16 @@ const splashScreen = {
     					             9. nightDay
     					             10. littleRobot
     					             11. poolChartLoading
-    					             */
+    					             */,
   duration: 3500, // Set animation duration(milliseconds) as per your animation
-}; 					
- 					
- 					
-/**************               Home Page                    ****************/
+};
 
+/**************               Home Page                    ****************/
 
 //SEO Related settings
 const seo = {
   title: "KasRoudra's Portfolio",
-  description:
-    "Portfolio Website of KasRoudra",
+  description: "Portfolio Website of KasRoudra",
   og: {
     title: "KasRoudra Portfolio",
     type: "website",
@@ -84,7 +79,7 @@ const seo = {
 //Home Page
 const greeting = {
   title: "KasRoudra",
-  logo_name: "KasRoudra", 
+  logo_name: "KasRoudra",
   nickname: "The Complex",
   subTitle:
     "A student playing with codes. Trying to learn full stack development and android app development. Loves to contribute in open source projects.",
@@ -110,42 +105,42 @@ const socialMediaLinks = [
     fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
     backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
   },
-//  {
-//    name: "LinkedIn",
-//    link: "https://www.linkedin.com/in/ashutosh-hathidara-88710b138/",
-//    fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
-//    backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
-//  },
-//  {
-//    name: "YouTube",
-//    link: "https://www.youtube.com/channel/UC_amoXmmxSY9KusoDczDTXQ",
-//    fontAwesomeIcon: "fa-youtube", // Reference https://fontawesome.com/icons/youtube?style=brands
-//    backgroundColor: "#FF0000", // Reference https://simpleicons.org/?q=youtube
-//  },
+  //  {
+  //    name: "LinkedIn",
+  //    link: "https://www.linkedin.com/in/ashutosh-hathidara-88710b138/",
+  //    fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
+  //    backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
+  //  },
+  //  {
+  //    name: "YouTube",
+  //    link: "https://www.youtube.com/channel/UC_amoXmmxSY9KusoDczDTXQ",
+  //    fontAwesomeIcon: "fa-youtube", // Reference https://fontawesome.com/icons/youtube?style=brands
+  //    backgroundColor: "#FF0000", // Reference https://simpleicons.org/?q=youtube
+  //  },
   {
     name: "Gmail",
     link: "mailto:kasroudrakrd@gmail.com",
     fontAwesomeIcon: "fa-google", // Reference https://fontawesome.com/icons/google?style=brands
     backgroundColor: "#D14836", // Reference https://simpleicons.org/?q=gmail
   },
-//  {
-//    name: "Twitter",
-//    link: "https://twitter.com/ashutosh_1919",
-//    fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
-//    backgroundColor: "#1DA1F2", // Reference https://simpleicons.org/?q=twitter
-//  },
+  //  {
+  //    name: "Twitter",
+  //    link: "https://twitter.com/ashutosh_1919",
+  //    fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
+  //    backgroundColor: "#1DA1F2", // Reference https://simpleicons.org/?q=twitter
+  //  },
   {
     name: "Facebook",
     link: "https://www.facebook.com/KasRoudra/",
     fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
     backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
   },
-//  {
-//    name: "Instagram",
-//    link: "https://www.instagram.com/layman_brother/",
-//    fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
-//    backgroundColor: "#E4405F", // Reference https://simpleicons.org/?q=instagram
-//  },
+  //  {
+  //    name: "Instagram",
+  //    link: "https://www.instagram.com/layman_brother/",
+  //    fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
+  //    backgroundColor: "#E4405F", // Reference https://simpleicons.org/?q=instagram
+  //  },
 ];
 
 // Skill Information
@@ -155,7 +150,8 @@ const skills = {
   data: [
     {
       title: "Terminal Based Tools",
-      imageName: "TerminalImg", /* Available imageNames: 
+      imageName:
+        "TerminalImg" /* Available imageNames: 
       
       FullStackImg, 
       TerminalImg,  
@@ -163,9 +159,9 @@ const skills = {
       AppDevelopImg, 
       CloudInfraImg,
       DataScienceImg.
-      */
+      */,
       skills: [
-        "⚡ Writting simple scripts for termianal like Encrypter, Youtube Downloader, Music Player!", 
+        "⚡ Writting simple scripts for termianal like Encrypter, Youtube Downloader, Music Player!",
         "⚡ I have also created phishing tools for educative purpose.",
         "⚡ I wish to write some frameworks for terminal in future!",
       ],
@@ -272,7 +268,8 @@ const skills = {
     },
     {
       title: "Android App Development",
-      imageName: "AppDevelopImg", /* Available imageNames: 
+      imageName:
+        "AppDevelopImg" /* Available imageNames: 
       
       FullStackImg, 
       TerminalImg,  
@@ -280,7 +277,7 @@ const skills = {
       AppDevelopImg, 
       CloudInfraImg,
       DataScienceImg.
-      */
+      */,
       skills: [
         "⚡ Stil beginner in this field.",
         "⚡ Created a simple calculator!",
@@ -296,8 +293,8 @@ const skills = {
           },
         },
         {
-          skillName: "Firebase",
-          fontAwesomeClassname: "simple-icons:firebase",
+          skillName: "Dart",
+          fontAwesomeClassname: "simple-icons:dart",
           style: {
             color: "#FF9900",
           },
@@ -345,7 +342,7 @@ const skills = {
           skillName: "JavaScript",
           fontAwesomeClassname: "simple-icons:javascript",
           style: {
-            backgroundColor: "transparent",	
+            backgroundColor: "transparent",
             color: "#0089D6",
           },
         },
@@ -354,54 +351,55 @@ const skills = {
   ],
 };
 
-const techStack = { // Skill Part
+const techStack = {
+  // Skill Part
   display: true, // Set it to true to view skillbars of language
   title: "Proficiency",
   experience: [
     {
       Stack: "HTML", // Insert stack or technology or language you have experience in
-      progressPercentage: "90%" // Insert relative proficiency in percentage
+      progressPercentage: "90%", // Insert relative proficiency in percentage
     },
     {
       Stack: "CSS/SASS",
-      progressPercentage: "80%"
+      progressPercentage: "80%",
     },
     {
       Stack: "JavaScript/TypeScript",
-      progressPercentage: "80%"
+      progressPercentage: "80%",
     },
     {
       Stack: "PHP",
-      progressPercentage: "60%"
+      progressPercentage: "60%",
     },
     {
       Stack: "Python",
-      progressPercentage: "80%"
+      progressPercentage: "80%",
     },
     {
       Stack: "Shell",
-      progressPercentage: "80%"
+      progressPercentage: "80%",
     },
     {
       Stack: "Ruby",
-      progressPercentage: "70%"
+      progressPercentage: "70%",
     },
     {
       Stack: "C",
-      progressPercentage: "60%"
+      progressPercentage: "60%",
     },
     {
       Stack: "Java",
-      progressPercentage: "60%"
+      progressPercentage: "60%",
     },
     {
       Stack: "GO",
-      progressPercentage: "60%"
+      progressPercentage: "60%",
     },
     {
       Stack: "CPP",
-      progressPercentage: "50%"
-    }
+      progressPercentage: "50%",
+    },
   ],
 };
 
@@ -412,28 +410,28 @@ const bigProjects = {
   subtitle: "Some startups and companies that i helped to create their tech",
   projects: [
     {
-      image: "saayaHealthLogo.png", 
+      image: "saayaHealthLogo.png",
       projectName: "Saayahealth",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
+          url: "http://saayahealth.com/",
+        },
         //  you can add extra buttons here.
-      ]
+      ],
     },
     {
-      image: "nextuLogo.jpg", 
+      image: "nextuLogo.jpg",
       projectName: "Nextu",
       projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
-    }
+          url: "http://nextu.se/",
+        },
+      ],
+    },
   ],
 };
 
@@ -441,26 +439,26 @@ const blogSection = {
   display: "none", // Set it none to hide blogs or set it to hardcdoded for following blogs otherwise you can set it to medium to show your fetched(if you used your username for fetcher.mjs) medium blogs
   title: "Blogs",
   subtitle:
-  "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
+    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
   blogs: [
     {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
+      url:
+        "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
       title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
       description:
-      "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
+        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?",
     },
     {
       url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
       title: "Why REACT is The Best?",
       description:
-      "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
+        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies.",
+    },
   ],
 };
 
-
 const talkSection = {
-  display: false, // Set it true to show talks	
+  display: false, // Set it true to show talks
   title: "Talks",
   subtitle: "I love to share my limited knowledge and get a speaker badge",
 
@@ -469,8 +467,8 @@ const talkSection = {
       title: "Build Actions For Google Assistant",
       subtitle: "Codelab at GDG DevFest Karachi 2019",
       slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
+      event_url: "https://www.facebook.com/events/2339906106275053/",
+    },
   ],
 };
 
@@ -483,20 +481,14 @@ const podcastSection = {
 
   // Please Provide with Your Podcast embeded Link
   podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
+    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo",
   ],
 };
 
-
 // Your tweets displayed in a iframe
-const twitterUsername =  "none"; // set it none to display no tweets
-
-
-
-
+const twitterUsername = "none"; // set it none to display no tweets
 
 /****************               Education Page          ****************/
-
 
 // Your profiles in Competitive Sites to be displayed in education page
 const competitiveSites = {
@@ -680,7 +672,6 @@ const certifications = {
   ],
 };
 
-
 /*******************          Experience Page          ****************/
 
 const experience = {
@@ -820,59 +811,51 @@ const experience = {
   ],
 };
 
-
-
-
 /********************              Hobbies         ********************/
 
-const hobbies= {
-	title: "Hobbies",
-	subTitle: "I spend my leisure with my hobbies!",
-	hobbies : [			
-		{
-		   title: "Reading Books",
-		   description: "I love to read sci-fi and detective books!",
-		   image_path: "Reading.png",
-		},
-		{
-  		title: "Writing",
-  		description: "I write poems and stories when I get free times!",
-  		image_path: "Writing.png", 
-		},
-		{
-  		title: "Memeing",
-  		description: "I have a collection of meme templates and I use them to generate memes!",
-  		image_path: "Memeing.png", 
-		},
-		{
-  		title: "Listening Music",
-  		description: "I am a fan of Alan Walker and Linkin Park!",
-  		image_path: "Music.png",
-		},
-	],
+const hobbies = {
+  title: "Hobbies",
+  subTitle: "I spend my leisure with my hobbies!",
+  hobbies: [
+    {
+      title: "Reading Books",
+      description: "I love to read sci-fi and detective books!",
+      image_path: "Reading.png",
+    },
+    {
+      title: "Writing",
+      description: "I write poems and stories when I get free times!",
+      image_path: "Writing.png",
+    },
+    {
+      title: "Memeing",
+      description:
+        "I have a collection of meme templates and I use them to generate memes!",
+      image_path: "Memeing.png",
+    },
+    {
+      title: "Listening Music",
+      description: "I am a fan of Alan Walker and Linkin Park!",
+      image_path: "Music.png",
+    },
+  ],
 };
-
 
 /****************            OpenSource Page           ********************/
 
-
 const openSource = {
-    
-    organisations: false, // Set it false to hide contributions in github organisations, defaults to true
-    
-    issues: true, // Set it false to hide your opened isssues, defaults to true
+  organisations: false, // Set it false to hide contributions in github organisations, defaults to true
 
-    pull_requests: true, // Set it false to hide your pull requests in github organisations, defaults to true
+  issues: true, // Set it false to hide your opened isssues, defaults to true
 
-    issue_chart: true, // Set it false to hide issue chart, defaults to true
+  pull_requests: true, // Set it false to hide your pull requests in github organisations, defaults to true
 
-    pr_chart: true, // Set it false to hide pull requests chart, defaults to true
-}
+  issue_chart: true, // Set it false to hide issue chart, defaults to true
 
-
+  pr_chart: true, // Set it false to hide pull requests chart, defaults to true
+};
 
 /****************            Projects Page           ********************/
-
 
 // Projects (Github) Section of Projects Page
 const projects = {
@@ -880,7 +863,7 @@ const projects = {
   title: "Projects",
   description:
     "My projects are mostly open source. I like to contribute in other's project. I always try my best to enhance every project to the peak!",
-  avatar_image_path: "projects_image.svg", 
+  avatar_image_path: "projects_image.svg",
 };
 
 // Publication Section of Projects Page
@@ -891,45 +874,49 @@ const publications = {
     "I have worked on and published a few research papers and publications of my own.",
   avatar_image_path: "projects_image.svg",
   publications: {
-  data: [
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
-      "name": "Artificial Intelligence Paper",
-      "createdAt": "2020-03-06T16:26:54Z",
-      "description": "Paper Written on Artificial Intelligence published in xyz ",
-      "url": "https://example.com",
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzi=",
-      "name": "Artificial Intelligence Paper",
-      "createdAt": "2020-03-06T16:26:54Z",
-      "description": "Paper Written on Artificial Intelligence published in xyz ",
-      "url": "https://example.com",
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNze=",
-      "name": "Artificial Intelligence Paper",
-      "createdAt": "2020-03-06T16:26:54Z",
-      "description": "Paper Written on Artificial Intelligence published in xyz ",
-      "url": "https://example.com",
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzt=",
-      "name": "Artificial Intelligence Paper",
-      "createdAt": "2020-03-06T16:26:54Z",
-      "description": "Paper Written on Artificial Intelligence published in xyz ",
-      "url": "https://example.com",
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzb=",
-      "name": "Artificial Intelligence Paper",
-      "createdAt": "2020-03-06T16:26:54Z",
-      "description": "Paper Written on Artificial Intelligence published in xyz ",
-      "url": "https://example.com",
-    }
-   ]
-  }
-
+    data: [
+      {
+        id: "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
+        name: "Artificial Intelligence Paper",
+        createdAt: "2020-03-06T16:26:54Z",
+        description:
+          "Paper Written on Artificial Intelligence published in xyz ",
+        url: "https://example.com",
+      },
+      {
+        id: "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzi=",
+        name: "Artificial Intelligence Paper",
+        createdAt: "2020-03-06T16:26:54Z",
+        description:
+          "Paper Written on Artificial Intelligence published in xyz ",
+        url: "https://example.com",
+      },
+      {
+        id: "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNze=",
+        name: "Artificial Intelligence Paper",
+        createdAt: "2020-03-06T16:26:54Z",
+        description:
+          "Paper Written on Artificial Intelligence published in xyz ",
+        url: "https://example.com",
+      },
+      {
+        id: "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzt=",
+        name: "Artificial Intelligence Paper",
+        createdAt: "2020-03-06T16:26:54Z",
+        description:
+          "Paper Written on Artificial Intelligence published in xyz ",
+        url: "https://example.com",
+      },
+      {
+        id: "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzb=",
+        name: "Artificial Intelligence Paper",
+        createdAt: "2020-03-06T16:26:54Z",
+        description:
+          "Paper Written on Artificial Intelligence published in xyz ",
+        url: "https://example.com",
+      },
+    ],
+  },
 };
 
 /*******************          Contact Page          ****************/
@@ -943,17 +930,16 @@ const contactPageData = {
   },
   blogSection: {
     title: "Blogs",
-    subtitle:
-      "I have written some stories and poems in my native language.",
+    subtitle: "I have written some stories and poems in my native language.",
     link: "https://kasroudra.github.io/kasweb",
     avatar_image_path: "blogs_image.svg",
   },
   addressSection: {
     title: "Address",
-    subtitle:
-      "Kalkini, Madaripur, Dhaka, Bangladesh",
+    subtitle: "Kalkini, Madaripur, Dhaka, Bangladesh",
     avatar_image_path: "address_image.svg",
-    location_map_link: "https://www.google.com/maps/@23.0840366,90.1250967,22z?gl=bd",
+    location_map_link:
+      "https://www.google.com/maps/@23.0840366,90.1250967,22z?gl=bd",
   },
   phoneSection: {
     title: "Phone Number",
@@ -963,10 +949,10 @@ const contactPageData = {
 
 // Send a message in emailjs account
 const contactMessage = {
-    display: true, // Set it false if you don't have emailjs account or you don't want message, defaults to true
-    emailjsUserID: "user_ZqZIbV7cSQojQaiPl89II",
-    templateID: "outlook1",
-    serviceID: "service_9fmduq9",
+  display: true, // Set it false if you don't have emailjs account or you don't want message, defaults to true
+  emailjsUserID: "user_ZqZIbV7cSQojQaiPl89II",
+  templateID: "outlook1",
+  serviceID: "service_9fmduq9",
 };
 
 export {

@@ -44,9 +44,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.main-page{
-	min-width: 100vw;
-	min-height: 100vh;
+.main-page {
+  min-width: 100vw;
+  min-height: 100vh;
 }
 html,
 body {
@@ -68,13 +68,11 @@ body {
   }
 }
 
-
-
 /* Classes from bootstrap */
 /* Credit: BootStrap */
 
 .btn.disabled {
-pointer-events: none;
+  pointer-events: none;
   opacity: 0.65;
 }
 
@@ -139,7 +137,6 @@ textarea.form-control-lg {
   min-height: calc(1.5em + 1rem + 2px);
 }
 
-
 .container {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
@@ -184,7 +181,6 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-
 .alert-heading {
   color: inherit;
   margin-top: 0;
@@ -228,26 +224,26 @@ textarea.form-control-lg {
 
 @media (min-width: 576px) {
   .container {
-     max-width: 540px;
-   }
- }
- @media (min-width: 768px) {
- .container {
-     max-width: 720px;
-   }
- }
- @media (min-width: 992px) {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
   .container {
-     max-width: 960px;
-   }
- }
- @media (min-width: 1200px) {
-   .container {
-     max-width: 1140px;
-   }
- }
- @media (min-width: 1400px) {
-   .container {
-     max-width: 1320px;
-   }
- }
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}

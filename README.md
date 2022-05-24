@@ -9,62 +9,66 @@
 <!-- ![Stars]https://img.shields.io/github/stars/KasRoudra/supremeFolio?style=for-the-badge&color=orange">
   <img src="https://img.shields.io/github/forks/KasRoudra/supremeFolio?color=cyan&style=for-the-badge&color=purple">
   <img src="https://img.shields.io/github/issues/KasRoudra/supremeFolio?color=red&style=for-the-badge">
-  <img src="https://img.shields.io/github/license/KasRoudra/supremeFolio?style=for-the-badge&color=blue">   
+  <img src="https://img.shields.io/github/license/KasRoudra/supremeFolio?style=for-the-badge&color=blue">
 <br>
 <br>
 -->
 
-  [![NodeJS](https://img.shields.io/badge/node-17.6.0-important?style=flat-square/)](https://nodejs.org/en/blog/release/v17.6.0/)
-  [![NPM](https://img.shields.io/badge/npm-8.5.1-blueviolet?style=flat-square)](https://www.npmjs.com/package/npm/v/8.5.1)
-  [![Made With React](https://img.shields.io/badge/Made%20With-React-61DAFB?style=flat-square)](https://reactjs.org/)
-  [![Author](https://img.shields.io/badge/Author-KasRoudra-purple?style=flat-square)](https://github.com/KasRoudra)
-  [![Opensource](https://img.shields.io/badge/Open%20Source-Yes-cyan?style=flat-square)](./LICENSE)
-  [![JS](https://img.shields.io/badge/Written%20In-JavaScript-blue?style=flat-square)](https://www.javascript.com)
-  [![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg?style=flat-square)](https://github.com/KasRoudra/supremeFolio/commits/main)
-  [![Website](https://img.shields.io/badge/Website-Up-yellow?style=flat-square)](https://kasroudra.github.io)
- 
+[![NodeJS](https://img.shields.io/badge/node-17.6.0-important?style=flat-square/)](https://nodejs.org/en/blog/release/v17.6.0/)
+[![NPM](https://img.shields.io/badge/npm-8.5.1-blueviolet?style=flat-square)](https://www.npmjs.com/package/npm/v/8.5.1)
+[![Made With React](https://img.shields.io/badge/Made%20With-React-61DAFB?style=flat-square)](https://reactjs.org/)
+[![Author](https://img.shields.io/badge/Author-KasRoudra-purple?style=flat-square)](https://github.com/KasRoudra)
+[![Opensource](https://img.shields.io/badge/Open%20Source-Yes-cyan?style=flat-square)](./LICENSE)
+[![JS](https://img.shields.io/badge/Written%20In-JavaScript-blue?style=flat-square)](https://www.javascript.com)
+[![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg?style=flat-square)](https://github.com/KasRoudra/supremeFolio/commits/main)
+[![Website](https://img.shields.io/badge/Website-Up-yellow?style=flat-square)](https://kasroudra.github.io)
+
 </div>
 
 ### Light Mode
 
 ![supremeFolio](public/icons/light-mode.png)
 
-### Dark Mode 
+### Dark Mode
 
 ![supremeFolio](public/icons/dark-mode.png)
 
 ## [~] Description :
 
-***A clean, beautiful, responsive and 100% customizable portfolio template for Software Developers! Beautify your portfolio to the peak!***
+**_A clean, beautiful, responsive and 100% customizable portfolio template for Software Developers! Beautify your portfolio to the peak!_**
 
 ## [~] Quick Guide
 
 #### Install primary dependencies (git and nodejs)
 
- - For Debian
-    - ```sudo apt install git nodejs -y```
- - For Arch
-    - ```sudo pacman -S git nodejs --noconfirm```
- - For Fedora
-    - ```sudo yum install git nodejs -y```
- - For Termux
-    - ```pkg install git nodejs -y```
+- For Debian
+  - `sudo apt install git nodejs -y`
+- For Arch
+  - `sudo pacman -S git nodejs --noconfirm`
+- For Fedora
+  - `sudo yum install git nodejs -y`
+- For Termux
+  - `pkg install git nodejs -y`
 
 #### Clone this repository
 
- - ```git clone https://github.com/KasRoudra/supremeFolio```
+- `git clone https://github.com/KasRoudra/supremeFolio`
 
 #### Enter the directory
- - ```cd supremeFolio```
+
+- `cd supremeFolio`
 
 #### Install npm dependencies
- - ```npm i```
- 
+
+- `npm i`
+
 #### SetUp Portfolio
- - **Just tweak `src/portfolio.js`**
- 
+
+- **Just tweak `src/portfolio.js`**
+
 #### Start local server in port 3000
- - ```npm start```
+
+- `npm start`
 
 #### Docker Commands
 
@@ -77,16 +81,16 @@ Now preview your site in [http://localhost:3000](http://localhost:3000)
 
 ### [☆]Features:
 
- - Show your github open source contributions(pull requests and issues)
- - Display your pinned projects of github and publications
- - Enrich your portfolio with skills and skillbars
- - Easy to tweak
- - Support for environment variable or hardcoded values
- - Show your achivements and certifications
- - Display your experiences
- - Dark Mode
- - Multiple themes
- 
+- Show your github open source contributions(pull requests and issues)
+- Display your pinned projects of github and publications
+- Enrich your portfolio with skills and skillbars
+- Easy to tweak
+- Support for environment variable or hardcoded values
+- Show your achivements and certifications
+- Display your experiences
+- Dark Mode
+- Multiple themes
+
 ## [★]Documentation
 
 #### Sections 📚
@@ -154,10 +158,11 @@ You can change the personal information, experience, education, social media, ce
 
 You need to use your github username and a github token to fetch and show your information about opensource contributions. Your medium username is required to fetch medium blogs.
 
-You can get a github token as described [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). The token we need, requires no permission. So you don't need to check any box while generating token. But make sure your token do not expire very soon. 
+You can get a github token as described [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). The token we need, requires no permission. So you don't need to check any box while generating token. But make sure your token do not expire very soon.
 
-Now, you've 2 options. 
-- If you are using [vercel](https://vercel.com) or [netlify](https://netlify.com) or similar site for your site's build, you can use environment variables. That environment variables are `GITHUB_TOKEN` and `GITHUB_USERNAME` and  `MEDIUM_USERNAME`. You can also use environment variables locally. You need to create a .env file or use our template by `cp env.example .env`. Then apply your username and token in that.
+Now, you've 2 options.
+
+- If you are using [vercel](https://vercel.com) or [netlify](https://netlify.com) or similar site for your site's build, you can use environment variables. That environment variables are `GITHUB_TOKEN` and `GITHUB_USERNAME` and `MEDIUM_USERNAME`. You can also use environment variables locally. You need to create a .env file or use our template by `cp env.example .env`. Then apply your username and token in that.
 
 ```env
 GITHUB_TOKEN = "YOUR GITHUB TOKEN HERE"
@@ -166,7 +171,7 @@ MEDIUM_USERNAME = "YOUR MEDIUM USERNAME HERE"
 ```
 
 - You will find `fetcher.mjs` file in the main directory of the repository. This file is used to fetch the data (Pull requests, Issues, Organizations, Pinned projects etc.) from your github.
-If you open the file, you will see below component at the top of the file. You need to change only that component.
+  If you open the file, you will see below component at the top of the file. You need to change only that component.
 
 ```javascript
 var githubConvertedToken: "Your Github Token Here.",
@@ -179,7 +184,7 @@ If you are only using static builds and do not contribute frequently in github y
 ```node
 node fetcher.mjs
 ```
-   
+
 **Warning:** Treat your tokens like passwords and keep them secret. When working with the API, use tokens as environment variables instead of hardcoding them into your programs. If you've used your token in `fetcher.mjs` make sure not to upload that.
 
 This will fetch all the data from your github and medium and it will automatically replace my data with yours.
@@ -213,11 +218,11 @@ Note here that if you click [my portfolio](https://KasRoudra.github.io), you can
 
 ### Other
 
- - You need to change the website title and other descriptions in `public/index.html`
- 
- - You can define your own favicon in `public/icons` directory. If you don't have a favicon, you can generate favicons from [Favicon Generator](https://www.favicon-generator.org/) and [Favicon IO](https://favicon.io/)
+- You need to change the website title and other descriptions in `public/index.html`
 
- - Also you can edit your website preview known as description image. Run your site locally, take a screenshot and replace with `public/icons/desc.png`. Note that your screenshot should be 1280x640 for better preview
+- You can define your own favicon in `public/icons` directory. If you don't have a favicon, you can generate favicons from [Favicon Generator](https://www.favicon-generator.org/) and [Favicon IO](https://favicon.io/)
+
+- Also you can edit your website preview known as description image. Run your site locally, take a screenshot and replace with `public/icons/desc.png`. Note that your screenshot should be 1280x640 for better preview
 
 ### Choose Theme 🌈
 
@@ -249,9 +254,10 @@ Note here that if you click [my portfolio](https://KasRoudra.github.io), you can
 - Run `npm run deploy` to build and create a branch called `gh-pages`. It will push the `build` files to that branch.
 - The last step in deploying is to enable `Github Pages` in settings of the repository and select `gh-pages` branch.
 
-Now, your website is successfully deployed and you can visit it at `<your-github-username>.github.io`.  
+Now, your website is successfully deployed and you can visit it at `<your-github-username>.github.io`.
 
 **Option 3**
+
 - Create a repository in github/gitlab/bitbucket.
 - Commit and push the source code to that repository. Then connect your github/gitlab/bitbucket account with [vercel](https://vercel.com) or [netlify](https://netlify.com).
 - Choose that repository from vercel or netlify. Use their services to build and publish your site. I prefer this more because in this method our changes in source code and commit and push results in live changes of wesbite without manual build.
@@ -264,20 +270,17 @@ You could also host directly with Netlify by linking your own repository.
 
 For more information, read [hosting on Netlify](https://create-react-app.dev/docs/deployment/#netlify).
 
-
-#### Deploying to Vercel 
+#### Deploying to Vercel
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/KasRoudra/supremeFolio)
 
 For more information, read [hosting on vercel](https://create-react-app.dev/docs/deployment/#vercel).
-
 
 #### Deploying to Heroku
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/KasRoudra/supremeFolio)
 
 For more information, read [hosting on heroku](https://create-react-app.dev/docs/deployment/#heroku).
-
 
 #### Extended
 
@@ -298,7 +301,6 @@ For more information, read [hosting on heroku](https://create-react-app.dev/docs
 - [emailjs](https://emailjs.com)
 - [chartjs](https://chartjs.org)
 
-
 ### License 📄
 
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
@@ -307,17 +309,18 @@ This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE)
 
 If you can help us with these, please don't hesitate to open an [pull request](https://github.com/Kasroudra/supremeFolio/pulls) or [issue](https://github.com/KasRoudra/supremeFolio/issues).
 
-
 #### This repository is open source to help others. So if you wish to copy, consider giving credit!
 
 ## Credits:
+
 This project is based on [masterPortfolio](https://github.com/ashutosh1919/masterPortfolio) and some implementations are from [developerFolio](https://github.com/saadpasta/developerFolio)
 
 ## [~] Find Me on :
+
 - [![Github](https://img.shields.io/badge/Github-KasRoudra-green?style=for-the-badge&logo=github)](https://github.com/KasRoudra)
 
 - [![Gmail](https://img.shields.io/badge/Gmail-KasRoudra-green?style=for-the-badge&logo=gmail)](mailto:kasroudrakrd@gmail.com)
- 
+
 - [![Facebook](https://img.shields.io/badge/Facebook-KasRoudra-green?style=for-the-badge&logo=messenger)](https://facebook.com/KasRoudra)
 
 - [![Messenger](https://img.shields.io/badge/Messenger-KasRoudra-green?style=for-the-badge&logo=messenger)](https://m.me/KasRoudra)
